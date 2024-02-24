@@ -17,15 +17,29 @@ class Api extends \MetForm\Base\Api
 
     public function post_update()
     {
+        
         if(!current_user_can('manage_options')) {
 			return;
 		}
 
+          
         $form_id = $this->request['id'];
         $form_setting = $this->request->get_params();
 
+
+        
+        if(isset($form_setting['mf_zoho'])){
+            $zoho_fields = isset($form_setting['mf-zoho-custom-fields']) && isset($form_setting['mf-zoho-form-fields'])? array_combine($form_setting['mf-zoho-custom-fields'], $form_setting['mf-zoho-form-fields']) : '';
+            update_post_meta($form_id, 'mf_zoho_fields', wp_json_encode( $zoho_fields ) );
+        }
+        
+        
         // Push the for type settings inside the form setting array
         $existing_form_setting = \MetForm\Core\Forms\Action::instance()->get_all_data($form_id);
+        
+
+        $this->setup_url_param_fields($form_id);
+
 
         if(isset($existing_form_setting['form_type'])){
             $form_setting['form_type'] = $existing_form_setting['form_type'];
@@ -165,6 +179,40 @@ class Api extends \MetForm\Base\Api
         }
 
         return Action::instance()->store($form_id, $form_setting);
+    }
+
+
+    /**
+     * Saving the form bypass mapped fields
+     * @param $form_id ID of the form
+     */
+    private function setup_url_param_fields($form_id)
+    {
+
+        if(isset($this->request['mf_redirect_params_status'])){
+            update_post_meta($form_id, 'mf_redirect_params_status', "true");
+        }else{
+            update_post_meta($form_id, 'mf_redirect_params_status', "false");
+        }
+
+        if (isset($this->request['mf_redirect_params_status'])) {
+
+            $form_redirection_values = array_combine($this->request['mf_url_submission_custom_fields_name']??[], $this->request['mf_url_submission_mf_field_name']??[]);
+
+            // Check if $form_redirection_values is empty or not.
+            if (!empty($form_redirection_values)) {
+
+                $json_encoded_values = json_encode($form_redirection_values);
+                
+                // Update the post meta with the JSON-encoded values.
+                update_post_meta($form_id, 'mf_redirect_params', $json_encoded_values);
+    
+            }else{
+                 // Update the post meta with blank
+                 update_post_meta($form_id, 'mf_redirect_params', '');
+                
+            }            
+        }
     }
 
     public function get_get()

@@ -43,15 +43,37 @@ class Base {
             if(did_action('xpd_metform_pro/plugin_loaded')) {
                 #Must be pro loaded....
 
-                if(!empty($_REQUEST['code']) && !empty($_REQUEST['state'])) {
+                if(!empty($_REQUEST['access_token']) && !empty($_REQUEST['refresh_token']) && !empty($_REQUEST['not_hubspot'])) {
+                    
 
-                    $code = sanitize_text_field(wp_unslash($_REQUEST['code']));
-                    $nonce = sanitize_text_field(wp_unslash($_REQUEST['state']));
+                    $code   = isset($_REQUEST['code']) ? sanitize_text_field(wp_unslash($_REQUEST['code'])) : '';
+                    $nonce  = isset($_REQUEST['state']) ? sanitize_text_field(wp_unslash($_REQUEST['state'])): '';
                     $option = get_option(\MetForm_Pro\Core\Integrations\Aweber::NONCE_VERIFICATION_KEY);
 
-                    if($option == $nonce) {
-                        update_option(\MetForm_Pro\Core\Integrations\Aweber::NONCE_VERIFICATION_KEY, '');
-                        update_option(\MetForm_Pro\Core\Integrations\Aweber::AUTHORIZATION_CODE_KEY, $code);
+                    $accessToken                    =   [];
+                    $accessToken['retrieved']       =   time();
+                    $accessToken['token_type']      =   isset($_REQUEST['token_type'])? sanitize_text_field( wp_unslash( $_REQUEST['token_type'] )) : '';
+                    $accessToken['expires_in']      =   isset($_REQUEST['expires_in'])? sanitize_text_field( wp_unslash( $_REQUEST['expires_in'] )) : '';
+                    $accessToken['refresh_token']   =   isset($_REQUEST['refresh_token'])? sanitize_text_field( wp_unslash( $_REQUEST['refresh_token'] )) : '';
+                    $accessToken['access_token']    =   isset($_REQUEST['access_token'])? sanitize_text_field( wp_unslash( $_REQUEST['access_token'] )) : '';
+    
+    
+                    set_transient('mf_aweber_token_transient',  $accessToken['access_token'], $accessToken['expires_in'] - 20 );
+                    update_option(\MetForm_Pro\Core\Integrations\Aweber::ACCESS_TOKEN_KEY, $accessToken);
+                    ?>
+
+                    <script type="text/javascript">
+                        // redirect to newsletter section
+                        location.href = '<?php echo admin_url('admin.php?page=metform-menu-settings#mf-newsletter_integration'); ?>';
+                    </script>
+
+                    <?php
+
+                    $option = get_option(\MetForm_Pro\Core\Integrations\Aweber::ACCESS_TOKEN_KEY);
+
+                    
+                    if($option) {
+                        $code  = $option;
                     }
 
                     $disabledAttr = 'disabled';
@@ -59,25 +81,27 @@ class Base {
 
                 } else {
 
-                    $code = get_option(\MetForm_Pro\Core\Integrations\Aweber::AUTHORIZATION_CODE_KEY);
+                    $code = get_option(\MetForm_Pro\Core\Integrations\Aweber::ACCESS_TOKEN_KEY);
 
                     $disabledAttr = empty($code)? '': 'disabled';
                 }
 
-                if(!empty($_REQUEST['code']) && empty($_REQUEST['state'])) {
+                if( !empty($_REQUEST['code']) && empty($_REQUEST['state']) ) {
                     $google = new \MetForm_Pro\Core\Integrations\Google_Sheet\Google_Access_Token;
                     $access_code = $google->get_access_token();
+                    
                     if(isset($access_code['body'])){
-                        $expire_time = isset(json_decode($access_code['body'], true)['expires_in']) ? json_decode($access_code['body'], true)['expires_in']:'';
-                        update_option('wf_google_access_token', $access_code['body']);
-                        set_transient('mf_google_sheet_token', $access_code['body'] , $expire_time - 20);
+                        $expire_time = isset(json_decode($access_code['body'], true)['expires_in'] ) ? json_decode($access_code['body'], true)['expires_in'] : '';
+                        update_option( 'wf_google_access_token', $access_code['body'] );
+                        set_transient( 'mf_google_sheet_token', $access_code['body'] , $expire_time - 20 );
                     }
                 }
             }
+            
             #Let check if this is returned from aweber..
             #Give state check
 
-            include('views/settings.php');
+            include( 'views/settings.php' );
         }
     }
 

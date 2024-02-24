@@ -17,7 +17,7 @@ echo esc_html__('Take your website to the next level', 'metform'); ?></strong></
 				<img class="badge--featured" src="<?php echo esc_url(self::get_url()); ?>assets/images/products/featured.svg">
                 <label>
                     <img class="mf-onboard-single-plugin--logo" src="<?php echo esc_url(self::get_url()); ?>assets/images/products/getgenie-logo.svg" alt="<?php echo esc_html__('Fundraising', 'metform');?>">
-                    <p class="mf-onboard-single-plugin--description"><span><?php echo esc_html__( 'Get FREE 1500 AI words, SEO Keyword, and Competitor Analysis credits', 'metform' )?> </span><?php echo esc_html__('on your personal AI assistant for Content & SEO right inside WordPress!', 'metform' ); ?></p>
+                    <p class="mf-onboard-single-plugin--description"><span><?php echo esc_html__( 'Get FREE 2500 AI words, SEO Keyword, and Competitor Analysis credits', 'metform' )?> </span><?php echo esc_html__('on your personal AI assistant for Content & SEO right inside WordPress!', 'metform' ); ?></p>
                     <?php $plugin = $pluginStatus->get_status('getgenie/getgenie.php'); ?>
                     <a data-plugin_status="<?php echo esc_attr($plugin['status']); ?>" data-activation_url="<?php echo esc_url($plugin['activation_url']); ?>" href="<?php echo esc_url($plugin['installation_url']); ?>" class="mf-pro-btn mf-onboard-single-plugin--install_plugin <?php echo $plugin['status'] == 'activated' ? 'activated' : ''; ?>"><?php echo esc_html($plugin['title'], 'metform'); ?></a>
                 </label>

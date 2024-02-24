@@ -16,8 +16,8 @@ class Render
         <li>
             <a href="#<?php echo esc_html($id); ?>" class="mf-setting-nav-link">
                 <div class="mf-setting-tab-content">
-                    <span class="mf-setting-title"><?php echo esc_html__($lable, 'metform'); ?></span>
-                    <span class="mf-setting-subtitle"><?php echo esc_html__($caption, 'metform'); ?></span>
+                    <span class="mf-setting-title"><?php echo esc_html($lable); ?></span>
+                    <span class="mf-setting-subtitle"><?php echo esc_html($caption); ?></span>
                 </div>
             </a>
         </li>
@@ -33,7 +33,7 @@ class Render
         <div class="mf-settings-section" id="<?php echo esc_html($id); ?>">
             <div class="mf-settings-single-section">
                 <div class="mf-setting-header">
-                    <h3 class="mf-settings-single-section--title"><?php esc_html_e($title, 'metform'); ?></h3>
+                    <h3 class="mf-settings-single-section--title"><?php echo esc_html($title); ?></h3>
                     <button type="submit" name="submit" id="submit" class="button button-primary"><span
                                 class="mf-admin-save-icon dashicons dashicons-yes-alt"></span><?php esc_attr_e('Save Changes', 'metform'); ?>
                     </button>
@@ -72,7 +72,7 @@ class Render
 
         <li class="attr-<?php echo esc_html($is_active); ?> attr-in">
             <a class="attr-nav-item attr-nav-link" data-toggle="tab" href="#<?php echo esc_html($target_id); ?> "
-               role="tab"><?php esc_attr_e($title, 'metform'); ?></a>
+               role="tab"><?php echo esc_attr($title); ?></a>
         </li>
 
         <?php
@@ -103,7 +103,7 @@ class Render
         $text  = isset($data['text']) ? $data['text'] : '';
     ?>
     <div class="mf-setting-input-group">
-        <button type="button" id="<?php echo esc_html($id,'metform') ?>" class="<?php echo esc_html($class,'metform') ?>"><?php echo esc_html($text,'metform') ?></button>
+        <button type="button" id="<?php echo esc_html($id) ?>" class="<?php echo esc_html($class) ?>"><?php echo esc_html($text) ?></button>
     </div>
     <?php 
     }
@@ -116,13 +116,13 @@ class Render
 
         <div class="mf-setting-input-group">
             <label for="attr-input-label"
-                   class="mf-setting-label mf-setting-label attr-input-label"><?php esc_html_e($data['lable'], 'metform'); ?></label>
+                   class="mf-setting-label mf-setting-label attr-input-label"><?php echo esc_html($data['lable']); ?></label>
             <input type="text" name="<?php echo esc_attr($data['name']); ?>"
                    value="<?php echo esc_attr((isset($settings[$data['name']])) ? $settings[$data['name']] : ''); ?>"
                    class="mf-setting-input mf-mailchimp-api-key attr-form-control"
-                   placeholder="<?php esc_html_e($data['placeholder'], 'metform'); ?>">
+                   placeholder="<?php echo esc_html($data['placeholder']); ?>">
             <p class="description">
-                <?php esc_html_e($data['description'], 'metform'); ?>
+                <?php echo esc_html($data['description']); ?>
             </p>
         </div>
 
@@ -138,19 +138,19 @@ class Render
             <label class="attr-input-label">
                 <input type="checkbox"
                        value="1"
-                       name="<?php echo esc_html_e($data['name'], 'metform'); ?>"
-                       class="mf-admin-control-input <?php echo esc_html_e($data['class'], 'metform'); ?>">
+                       name="<?php echo esc_html($data['name']); ?>"
+                       class="mf-admin-control-input <?php echo esc_html($data['class']); ?>">
 
 
                 <span>
-                        <?php esc_html_e($data['label'], 'metform'); ?>
+                        <?php echo esc_html($data['label']); ?>
                     </span>
 
             </label>
             <?php if (isset($data['details'])): ?>
                 <span
                         class='mf-input-help'>
-                    <?php esc_html_e($data['details'], 'metform'); ?>
+                    <?php echo esc_html($data['details']); ?>
                     
             </span>
             <?php endif; ?>
@@ -166,7 +166,7 @@ class Render
 
         <li role="presentation">
             <a href="#<?php echo esc_attr($id); ?>" aria-controls="crm" role="tab" data-toggle="tab">
-                <?php esc_html_e($lable, 'metform'); ?>
+                <?php echo esc_html($lable); ?>
             </a>
         </li>
 

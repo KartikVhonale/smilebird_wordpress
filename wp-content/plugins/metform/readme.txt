@@ -1,9 +1,9 @@
-=== Metform Elementor Contact Form Builder ===
+=== Metform Elementor Contact Form Builder===
 Contributors: xpeedstudio, ataurr, emranio
 Tags: Form builder, contact form, Elementor contact form, contact form builder, Elementor forms builder, drag and drop builder
 Requires at least: 4.8
 Tested up to: 6.3
-Stable tag: 3.4.1
+Stable tag: 3.6.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -299,6 +299,19 @@ Connect with Gmail, Slack, Mailchimp, and many more. It helps to post Trello car
 **Migrations are coming soon in these forms. Contact Form 7, Caldera Forms, Ninja Forms, Gravity Forms, fluent forms, wp forms, Forminator & Formidable Form Builder, Everest Forms**
 
 == Changelog == 
+
+Version: 3.6.0 // 2023-10-01
+Fixed: Switch widget control issue
+Fixed: Elementor deprecation issue
+Improved: Dashboard UI
+
+Version: 3.5.1 // 2023-09-19
+Improved: User experience
+
+Version: 3.5.0 // 2023-09-17
+Added: Checkbox to disable promotional notice.
+Improved: Plugin security with adding more escaping, sanitization.
+Fixed: Live URL link was broken on settings page.
 
 Version: 3.4.1 // 2023-09-04
 Fixed: Admin notice permission and prevent API request for drafted or trashed forms.

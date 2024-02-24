@@ -254,7 +254,7 @@ class Shortcode
 			$status = false;
 		}
 		// token not matched return false 
-		if((isset($_COOKIE['bWYtY29va2ll']) && !password_verify($token_str, $_COOKIE['bWYtY29va2ll']))) {
+		if((isset($_COOKIE['bWYtY29va2ll']) && !password_verify($token_str, sanitize_text_field(wp_unslash($_COOKIE['bWYtY29va2ll']))))) {
 			$status = false;
 		}
 		

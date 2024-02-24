@@ -249,7 +249,7 @@ if(!class_exists('\Wpmet\Libs\Pro_Awareness')) :
 								<label>
 									<img src="<?php echo esc_attr( $product['thumbnail'] ); ?>" alt="Thumbnail">
 								</label>
-							<span><?php esc_html_e($product['description'],'metform'); ?></span></a>
+							<span><?php echo esc_html($product['description']); ?></span></a>
 						<?php endforeach; ?>
 					</div>
 				</div>

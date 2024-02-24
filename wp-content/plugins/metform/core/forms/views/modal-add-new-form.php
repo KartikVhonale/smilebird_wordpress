@@ -58,7 +58,11 @@
                 </li>
 
                 <?php foreach(\MetForm\Templates\Base::instance()->get_templates() as $template): ?>
-                   <?php include \MetForm\Plugin::instance()->core_dir() . 'forms/views/modal-form-template-item.php'; ?>
+                   <?php 
+                        if( isset($template['form_type']) && $template['form_type'] === 'general-form' ){
+                            include \MetForm\Plugin::instance()->core_dir() . 'forms/views/modal-form-template-item.php'; 
+                        }
+                    ?>
                 <?php endforeach; ?>
             </ul>
             

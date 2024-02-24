@@ -148,7 +148,7 @@ trait Conditional_Controls{
 				'condition' => [
 					'mf_conditional_logic_form_enable' => 'yes',
 				],
-				'title_field' => '{{{ mf_conditional_logic_form_if }}} {{{ mf_conditional_logic_form_comparison_operators }}} {{{ mf_conditional_logic_form_value }}}',
+				'title_field' => '{{{ mf_conditional_logic_form_if }}} {{{ mf_conditional_logic_form_comparison_operators }}} {{{ (mf_conditional_logic_form_comparison_operators == "empty" || mf_conditional_logic_form_comparison_operators == "not-empty")  ? "" : mf_conditional_logic_form_value }}}',
 			)
 		);
 		

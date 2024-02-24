@@ -40,7 +40,7 @@ class Action
             'status' => 0,
             'store_entries' => 1,
             'error' => [
-                esc_html__('Some thing went wrong.', 'metform'),
+                esc_html__('Something went wrong.', 'metform'),
             ],
             'data' => [
                 'message' => '',
@@ -200,7 +200,7 @@ class Action
 
             if (($entry_limit == 1) && ($this->get_entry_count() >= $this->form_settings['limit_total_entries'])) {
                 $this->response->status = 0;
-                $this->response->error = [ esc_html__('Form submission limit exceed.', 'metform') ];
+                $this->response->error = [ esc_html__('Form submission limit exceeded.', 'metform') ];
 
                 return $this->response;
             }
@@ -435,6 +435,18 @@ class Action
         do_action("metform_after_store_form_data", $form_id, $form_data, $this->form_settings, $attributes);
 
         $this->response->data['redirect_to'] = (empty($this->form_settings['redirect_to'])) ? '' : add_query_arg('id', $this->entry_id, $this->form_settings['redirect_to']);
+        
+        $bypass_form_data =  get_post_meta($form_id, 'mf_redirect_params_status', true);
+
+        if($bypass_form_data){
+
+            $url_redirect_params = $this->get_redirect_url_params();
+            if($url_redirect_params){
+                $this->response->data['redirect_to'] = add_query_arg($url_redirect_params, $this->response->data['redirect_to']);
+            }
+            
+        }
+
 
         // data submit to a rest api check and action
         if (class_exists('\MetForm_Pro\Core\Integrations\Rest_Api') && isset($this->form_settings['mf_rest_api']) && ($this->form_settings['mf_rest_api_url'] != '')) {
@@ -854,12 +866,13 @@ class Action
         foreach ($form_data as $key => $value) {
 
             if (isset($fields[$key])) {
+                
                 $this->form_data[$key] = $value;
 
                 /**
                  * Credit card value sanitizaton & type insertion
                  */
-                if ($fields[$key]->widgetType == "mf-credit-card") {
+                if ($fields[$key]->widgetType == "mf-credit-card" && !empty(trim($value))) {
 
                     $this->form_data[$key] = str_repeat('*', strlen(str_replace(' ', '', $value)) - 4) . substr(str_replace(' ', '', $value), -4);
                     $this->form_data[$key . '--type'] = $form_data[$key . '--type']; #insert credit card type
@@ -905,48 +918,85 @@ class Action
         }
     }
 
+
+    
     private function handle_file($file_data, $input_name)
     { 
-        if(empty($file_data[$input_name])) {
+         
+        if (empty($file_data[$input_name])) {
             return;
         }
 
-        $files         = $file_data[$input_name];
-        $total_files   = ( isset($file_data[$input_name]['name']) && is_array($file_data[$input_name]['name']) ) ? count($file_data[$input_name]['name']) : 0;
-        $failed        = false;
+         // need to require WordPress wp_handle_upload function
+         require_once ABSPATH . 'wp-admin/includes/file.php';
+
+        $files = $file_data[$input_name];
+        $total_files = (isset($file_data[$input_name]['name']) && is_array($file_data[$input_name]['name'])) ? count($file_data[$input_name]['name']) : 0;
+        $failed = false;
         $uploaded_info = [];
 
-        for ( $index = 0; $index <  $total_files; $index++ ) {
+        for ($index = 0; $index < $total_files; $index++) {
             if (isset($files['name'][$index]) && $files['name'][$index] != '') {
-                $extension = pathinfo($files['name'][$index],PATHINFO_EXTENSION );
-                $upload           = wp_upload_dir();
-                $upload_file_name = "entry-file-".uniqid()."-".microtime(true)."-.".$extension;
-                $upload_status    = move_uploaded_file($files['tmp_name'][$index], $upload['path'] . "/" . $upload_file_name);
+                $file = [
+                    'name' => "entry-file-".uniqid(microtime())."-".$files['name'][$index],
+                    'type' => $files['type'][$index],
+                    'tmp_name' => $files['tmp_name'][$index],
+                    'error' => isset($files['error'][$index]) ? $files['error'][$index] : null,
+                    'size' => $files['size'][$index],
+                ];
 
-                $upload['name'] = $files['name'][$index];
-                $upload['url']  = $upload['url'] . "/" . $upload_file_name;
-                $upload['file'] = str_replace ("\\", "/", $upload['path'] . "/" . $upload_file_name);
-                $upload['type'] = $files['type'][$index];
-                unset($upload['path'], $upload['subdir'], $upload['basedir'], $upload['baseurl']);
-                
-                if (!$upload_status) {  
-                    $failed =  true;
+
+                $upload = \wp_handle_upload($file, array('test_form' => false));
+
+                if (isset($upload['error']) && $upload['error']) {
+                    $failed = true;
                     break;
                 } else {
-                    $uploaded_info[] = $upload; 
+                    $uploaded_info[] = [
+                        'name' => $files['name'][$index],
+                        'url' => $upload['url'],
+                        'file' => $upload['file'],
+                        'type' => $files['type'][$index],
+                    ];
                 }
             }
         }
 
         if ($failed) {
             $this->response->status = 0;
-            $this->response->error[] = esc_html__('There was an error uploading your file. The error is: ', 'metform') . $upload['error'];
+            $this->response->error[] = esc_html__('There was an error uploading your file.', 'metform');
         } else {
             $this->file_upload_info[$input_name] = $uploaded_info;
             $this->response->status = 1;
         } 
     }
     
+    private function get_redirect_url_params(){
+
+        $url_data = [];
+
+        // get current form redirect url params 
+        $redireact_params = get_post_meta($this->form_id, 'mf_redirect_params', true);
+
+        if(trim($redireact_params)){
+            $redireact_params = json_decode($redireact_params, true);
+            if(is_array($redireact_params)){
+
+                foreach($redireact_params as $r_key => $r_params){ 
+                    foreach($this->form_data as $d_key => $f_data){
+                    
+                        // check for key match
+                        if(trim($r_params) == trim($d_key)){
+                                $url_data[$r_key] = $f_data;
+                        }
+                    }
+                }
+                return $url_data;
+            }
+        }
+        return false;
+    }
+
     /**
      * Converting an png image string to png image file.
      *
@@ -1052,7 +1102,7 @@ class Action
             foreach ($repeater_data as $index => $value) {
                 if (is_array($value)) {
                     foreach ($value as $input_name => $input_value) {
-                        $proc_key = $input_name . "-" . ($index + 1);
+                        $proc_key = $input_name . "-" . ((int)$index + 1);
                         if (is_array($input_value)) {
                             $data[$proc_key] = implode(', ', $input_value);
                         } else {

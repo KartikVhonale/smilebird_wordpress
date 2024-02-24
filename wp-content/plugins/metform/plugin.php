@@ -23,7 +23,7 @@ final class Plugin {
 
     public function version()
     {
-        return '3.4.1';
+        return '3.6.0';
     }
 
     public function package_type()
@@ -320,6 +320,8 @@ final class Plugin {
 
         wp_register_style('metform-style', $this->public_url() . 'assets/css/style.css', false, $this->version());
 
+        wp_register_style('text-editor-style', $this->public_url() . 'assets/css/text-editor.css', false, $this->version());
+
         wp_register_script('htm', $this->public_url() . 'assets/js/htm.js', null, $this->version(), true);
 
         wp_register_script('metform-app', $this->public_url() . 'assets/js/app.js', ['htm', 'jquery', 'wp-element'], $this->version(), true);
@@ -358,12 +360,14 @@ final class Plugin {
         // ends pro feature
 
 
+        wp_enqueue_style('text-editor-style');
+        
         if($is_form_cpt){
             wp_enqueue_style('metform-ui');
             wp_enqueue_style('metform-style');
             wp_enqueue_script('htm');
             wp_enqueue_script('metform-app');
-        }
+        } 
 
         do_action('metform/onload/enqueue_scripts');
     }
@@ -509,7 +513,7 @@ final class Plugin {
             $btn['text'] = esc_html__('Install Elementor', 'metform');
             $btn['url'] = wp_nonce_url(self_admin_url('update.php?action=install-plugin&plugin=elementor'), 'install-plugin_elementor');
         }
-
+        // translators: MetForm plugin version requirement. %s is the required Elementor version.
         $message = sprintf(esc_html__('MetForm requires Elementor version %1$s+, which is currently NOT RUNNING.', 'metform'), '2.6.0');
 
         \Oxaim\Libs\Notice::instance('metform', 'unsupported-elementor-version')
@@ -543,6 +547,7 @@ final class Plugin {
     {
 
         $btn['text'] = esc_html__('Update Elementor', 'metform');
+        // translators: MetForm plugin version requirement. %s is the required Elementor version.
         $btn['url'] = sprintf(esc_html__('MetForm requires Elementor version %1$s+, which is currently NOT RUNNING.', 'metform'), '2.6.0');
         $btn['class'] = 'button-primary';
 

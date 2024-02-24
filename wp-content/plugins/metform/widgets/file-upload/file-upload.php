@@ -470,7 +470,9 @@ Class MetForm_Input_File_Upload extends Widget_base{
 			'file_types'	=> isset($mf_input_file_types) ? $mf_input_file_types : [],
 			'type_message'	=> esc_html__('Invalid file extension', 'metform'),
 			'size_limit'	=> isset($mf_input_file_size_limit) ? $mf_input_file_size_limit : -1,
-			'limit_message'	=> isset($mf_input_file_size_limit) ? esc_html__('File size cannot exceed ' . $mf_input_file_size_limit . 'kb', 'metform') : $errorMessage,
+			'limit_message'	=> isset($mf_input_file_size_limit) ? 
+			// translators: File size limit in kilobytes for the MetForm plugin. %s is the dynamic file size limit.
+			sprintf(esc_html__('File size cannot exceed %s kb','metform' ), $mf_input_file_size_limit) : $errorMessage,
 		];
 		?>
 		
@@ -504,7 +506,7 @@ Class MetForm_Input_File_Upload extends Widget_base{
 					?>
 				</label>
 				<div className="mf-file-name">
-					<span>${parent.getFileLabel( '<?php echo esc_attr($mf_input_name); ?>', '<?php esc_html_e($mf_input_no_file, 'metform'); ?>' )}</span>
+					<span>${parent.getFileLabel( '<?php echo esc_attr($mf_input_name); ?>', '<?php echo esc_html($mf_input_no_file); ?>' )}</span>
 				</div>
 				
 			</div>

@@ -355,7 +355,7 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                                 </label>
                                                                 <input type="text" name="mf_recaptcha_site_key" value="<?php echo esc_attr((isset($settings['mf_recaptcha_site_key'])) ? $settings['mf_recaptcha_site_key'] : ''); ?>" class="mf-setting-input attr-form-control mf-recaptcha-site-key" placeholder="<?php esc_html_e('Insert site key', 'metform'); ?>">
                                                                 <p class="description">
-                                                                    <?php esc_html_e('Create google reCaptcha site key from reCaptcha admin panel. ', 'metform'); ?><a target="__blank" class="mf-setting-btn-link" href="<?php echo esc_url('https://www.google.com/recaptcha/admin/', 'metform'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
+                                                                    <?php esc_html_e('Create google reCaptcha site key from reCaptcha admin panel. ', 'metform'); ?><a target="__blank" class="mf-setting-btn-link" href="<?php echo esc_url('https://www.google.com/recaptcha/admin/'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
                                                                 </p>
                                                             </div>
                                                             <div class="mf-setting-input-group">
@@ -363,7 +363,7 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                                 </label>
                                                                 <input type="text" name="mf_recaptcha_secret_key" value="<?php echo esc_attr((isset($settings['mf_recaptcha_secret_key'])) ? $settings['mf_recaptcha_secret_key'] : ''); ?>" class="mf-setting-input attr-form-control mf-recaptcha-secret-key" placeholder="<?php esc_html_e('Insert secret key', 'metform'); ?>">
                                                                 <p class="description">
-                                                                    <?php esc_html_e('Create google reCaptcha secret key from reCaptcha admin panel. ', 'metform'); ?><a target="__blank" class="mf-setting-btn-link" href="<?php echo esc_url('https://www.google.com/recaptcha/admin/', 'metform'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
+                                                                    <?php esc_html_e('Create google reCaptcha secret key from reCaptcha admin panel. ', 'metform'); ?><a target="__blank" class="mf-setting-btn-link" href="<?php echo esc_url('https://www.google.com/recaptcha/admin/'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -374,7 +374,7 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                                 </label>
                                                                 <input type="text" name="mf_recaptcha_site_key_v3" value="<?php echo esc_attr((isset($settings['mf_recaptcha_site_key_v3'])) ? $settings['mf_recaptcha_site_key_v3'] : ''); ?>" class="mf-setting-input attr-form-control mf-recaptcha-site-key" placeholder="<?php esc_html_e('Insert site key', 'metform'); ?>">
                                                                 <p class="description">
-                                                                    <?php esc_html_e('Create google reCaptcha site key from reCaptcha admin panel. ', 'metform'); ?><a target="__blank" class="mf-setting-btn-link" href="<?php echo esc_url('https://www.google.com/recaptcha/admin/', 'metform'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
+                                                                    <?php esc_html_e('Create google reCaptcha site key from reCaptcha admin panel. ', 'metform'); ?><a target="__blank" class="mf-setting-btn-link" href="<?php echo esc_url('https://www.google.com/recaptcha/admin/'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
                                                                 </p>
                                                             </div>
                                                             <div class="mf-setting-input-group">
@@ -382,7 +382,7 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                                 </label>
                                                                 <input type="text" name="mf_recaptcha_secret_key_v3" value="<?php echo esc_attr((isset($settings['mf_recaptcha_secret_key_v3'])) ? $settings['mf_recaptcha_secret_key_v3'] : ''); ?>" class="mf-setting-input attr-form-control mf-recaptcha-secret-key" placeholder="<?php esc_html_e('Insert secret key', 'metform'); ?>">
                                                                 <p class="description">
-                                                                    <?php esc_html_e('Create google reCaptcha secret key from reCaptcha admin panel. ', 'metform'); ?><a target="__blank" class="mf-setting-btn-link" href="<?php echo esc_url('https://www.google.com/recaptcha/admin/', 'metform'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
+                                                                    <?php esc_html_e('Create google reCaptcha secret key from reCaptcha admin panel. ', 'metform'); ?><a target="__blank" class="mf-setting-btn-link" href="<?php echo esc_url('https://www.google.com/recaptcha/admin/'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -400,7 +400,7 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                             </label>
                                                             <input type="text" name="mf_google_map_api_key" value="<?php echo esc_attr((isset($settings['mf_google_map_api_key'])) ? $settings['mf_google_map_api_key'] : ''); ?>" class="mf-setting-input attr-form-control mf-google-map-api-key" placeholder="<?php esc_html_e('Insert map API key', 'metform'); ?>">
                                                             <p class="description">
-                                                                <?php esc_html_e('Create google map API key from google developer console. ', 'metform'); ?><a target="__blank" class="mf-setting-btn-link" href="<?php echo esc_url('https://console.cloud.google.com/google/maps-apis/', 'metform'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
+                                                                <?php esc_html_e('Create google map API key from google developer console. ', 'metform'); ?><a target="__blank" class="mf-setting-btn-link" href="<?php echo esc_url('https://console.cloud.google.com/google/maps-apis/'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -489,7 +489,7 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                             <label class="mf-setting-label"><?php esc_html_e('Paypal email:', 'metform'); ?></label>
                                                             <input type="email" name="mf_paypal_email" value="<?php echo esc_attr((isset($settings['mf_paypal_email'])) ? $settings['mf_paypal_email'] : ''); ?>" class="mf-setting-input mf-paypal-email attr-form-control" placeholder="<?php esc_html_e('Paypal email', 'metform'); ?>">
                                                             <p class="description">
-                                                                <?php esc_html_e('Enter here your paypal email. ', 'metform'); ?><a class="mf-setting-btn-link" target="__blank" href="<?php echo esc_url('https://www.paypal.com/', 'metform'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
+                                                                <?php esc_html_e('Enter here your paypal email. ', 'metform'); ?><a class="mf-setting-btn-link" target="__blank" href="<?php echo esc_url('https://www.paypal.com/'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
                                                             </p>
                                                         </div>
 
@@ -497,7 +497,7 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                             <label class="mf-setting-label"><?php esc_html_e('Paypal token:', 'metform'); ?></label>
                                                             <input type="text" name="mf_paypal_token" value="<?php echo esc_attr((isset($settings['mf_paypal_token'])) ? $settings['mf_paypal_token'] : ''); ?>" class="mf-setting-input mf-paypal-token attr-form-control" placeholder="<?php esc_html_e('Paypal token', 'metform'); ?>">
                                                             <p class="description">
-                                                                <?php esc_html_e('Enter here your paypal token. This is optional. ', 'metform'); ?><a class="mf-setting-btn-link" target="__blank" href="<?php echo esc_url('https://www.paypal.com/', 'metform'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
+                                                                <?php esc_html_e('Enter here your paypal token. This is optional. ', 'metform'); ?><a class="mf-setting-btn-link" target="__blank" href="<?php echo esc_url('https://www.paypal.com/'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
                                                             </p>
                                                         </div>
 
@@ -529,7 +529,7 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                                 <label for="attr-input-label" class="mf-setting-label attr-input-label"><?php esc_html_e('Live publishiable key:', 'metform'); ?></label>
                                                                 <input type="text" name="mf_stripe_live_publishiable_key" value="<?php echo esc_attr((isset($settings['mf_stripe_live_publishiable_key'])) ? $settings['mf_stripe_live_publishiable_key'] : ''); ?>" class="mf-setting-input mf-stripe-live-publishiable-key attr-form-control" placeholder="<?php esc_html_e('Stripe live publishiable key', 'metform'); ?>">
                                                                 <p class="description">
-                                                                    <?php esc_html_e('Enter here your stripe live publishiable key. ', 'metform'); ?><a class="mf-setting-btn-link" target="__blank" href="<?php echo esc_url('https://stripe.com/', 'metform'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
+                                                                    <?php esc_html_e('Enter here your stripe live publishiable key. ', 'metform'); ?><a class="mf-setting-btn-link" target="__blank" href="<?php echo esc_url('https://stripe.com/'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
                                                                 </p>
                                                             </div>
 
@@ -537,7 +537,7 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                                 <label for="attr-input-label" class="mf-setting-label attr-input-label"><?php esc_html_e('Live secret key:', 'metform'); ?></label>
                                                                 <input type="text" name="mf_stripe_live_secret_key" value="<?php echo esc_attr((isset($settings['mf_stripe_live_secret_key'])) ? $settings['mf_stripe_live_secret_key'] : ''); ?>" class="mf-setting-input mf-stripe-live-secret-key attr-form-control" placeholder="<?php esc_html_e('Stripe live secret key', 'metform'); ?>">
                                                                 <p class="description">
-                                                                    <?php esc_html_e('Enter here your stripe live secret key. ', 'metform'); ?><a target="__blank" class="mf-setting-btn-link" href="<?php echo esc_url('https://stripe.com/', 'metform'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
+                                                                    <?php esc_html_e('Enter here your stripe live secret key. ', 'metform'); ?><a target="__blank" class="mf-setting-btn-link" href="<?php echo esc_url('https://stripe.com/'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
                                                                 </p>
                                                             </div>
 
@@ -556,7 +556,7 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                                     <label for="attr-input-label" class="mf-setting-label attr-input-label"><?php esc_html_e('Test publishiable key:', 'metform'); ?></label>
                                                                     <input type="text" name="mf_stripe_test_publishiable_key" value="<?php echo esc_attr((isset($settings['mf_stripe_test_publishiable_key'])) ? $settings['mf_stripe_test_publishiable_key'] : ''); ?>" class="mf-setting-input mf-stripe-test-publishiable-key attr-form-control" placeholder="<?php esc_html_e('Stripe test publishiable key', 'metform'); ?>">
                                                                     <p class="description">
-                                                                        <?php esc_html_e('Enter here your test publishiable key. ', 'metform'); ?><a class="mf-setting-btn-link" target="__blank" href="<?php echo esc_url('https://stripe.com/', 'metform'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
+                                                                        <?php esc_html_e('Enter here your test publishiable key. ', 'metform'); ?><a class="mf-setting-btn-link" target="__blank" href="<?php echo esc_url('https://stripe.com/'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
                                                                     </p>
                                                                 </div>
                                                                 <div class="mf-setting-input-group">
@@ -716,21 +716,7 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                     <div class="attr-row">
                                                         <div class="attr-col-lg-6">
 
-                                                            <div class="mf-setting-input-group">
-                                                                <label for="attr-input-label" class="mf-setting-label mf-setting-label attr-input-label"><?php esc_html_e('Developer App ID:', 'metform'); ?></label>
-                                                                <input type="text" <?php echo esc_attr($disabledAttr); ?> name="mf_aweber_dev_api_key" id="mf_aweber_dev_api_key" value="<?php echo esc_attr((isset($settings['mf_aweber_dev_api_key'])) ? $settings['mf_aweber_dev_api_key'] : ''); ?>" class="mf-setting-input mf-mailchimp-api-key attr-form-control" placeholder="<?php esc_html_e('AWeber developer client Id key', 'metform'); ?>">
-                                                                <p class="description">
-                                                                    <?php esc_html_e('Enter here your Aweber developer app key. ', 'metform'); ?><a target="__blank" class="mf-setting-btn-link" href="<?php echo esc_url('https://labs.aweber.com/apps/'); ?>"><?php esc_html_e('Get API.', 'metform'); ?></a>
-                                                                </p>
-                                                            </div>
-
-                                                            <div class="mf-setting-input-group">
-                                                                <label for="attr-input-label" class="mf-setting-label mf-setting-label attr-input-label"><?php esc_html_e('Developer App Secret:', 'metform');  ?> </label>
-                                                                <input type="text" <?php echo esc_attr($disabledAttr); ?> id="mf_aweber_dev_api_sec" name="mf_aweber_dev_api_sec" value="<?php echo esc_attr((isset($settings['mf_aweber_dev_api_sec'])) ? $settings['mf_aweber_dev_api_sec'] : ''); ?>" class="mf-setting-input mf-mailchimp-api-key attr-form-control" placeholder="<?php esc_html_e('AWeber developer secret key', 'metform'); ?>">
-                                                                <p class="description">
-                                                                    <?php esc_html_e('Enter here your Aweber developer secret key. ', 'metform'); ?><a target="__blank" class="mf-setting-btn-link" href="<?php echo esc_url('https://labs.aweber.com/apps/'); ?>"><?php esc_html_e('Get API.', 'metform'); ?></a>
-                                                                </p>
-                                                            </div>
+                                                           
 
                                                             <div class="mf-setting-input-group">
                                                                 <label for="attr-input-label" class="mf-setting-label mf-setting-label attr-input-label"><?php esc_html_e('Redirect url:', 'metform'); ?></label>
@@ -739,20 +725,19 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                                 </p>
                                                             </div>
 
-                                                            <?php if (!empty($code)) : ?>
+                                                            <?php if (empty($code)) : ?>
                                                                 <div class="mf-setting-input-group">
                                                                     <p class="description">
-                                                                        <a id="met_pro_aweber_propmpt_re_auth" class="button-primary mf-setting-btn"> Re Authorize </a>
+                                                                        <a href="https://api.wpmet.com/public/aweber-auth/auth.php?redirect_url=<?php echo esc_url(get_admin_url() . 'admin.php?page=metform-menu-settings' . "&state=" . wp_create_nonce() . "&section_id=mf-newsletter_integration"); ?>" class="button-primary mf-setting-btn"> <?php esc_html_e('Connect AWeber', 'metform'); ?> </a>
                                                                     </p>
                                                                 </div>
                                                             <?php else : ?>
                                                                 <div class="mf-setting-input-group">
-
                                                                     <p class="description">
-                                                                        <button class="mf-setting-btn-link" id="met_pro_aweber_authorize"> Get Authorization URL
-                                                                        </button>
+                                                                        <a href="https://api.wpmet.com/public/aweber-auth/auth.php?redirect_url=<?php echo esc_url(get_admin_url() . 'admin.php?page=metform-menu-settings' . "&state=" . wp_create_nonce() . "&section_id=mf-newsletter_integration"); ?>" class="button-primary mf-setting-btn"> <?php esc_html_e('Reonnect AWeber', 'metform'); ?> </a>
                                                                     </p>
                                                                 </div>
+                                                                   
                                                             <?php endif; ?>
 
                                                         </div>
@@ -984,14 +969,14 @@ $settings = \MetForm\Core\Admin\Base::instance()->get_settings_option();
                                                         <label for="attr-input-label" class="mf-setting-label mf-setting-label attr-input-label"><?php esc_html_e('Google Client Id:', 'metform'); ?></label>
                                                         <input type="text" name="mf_google_sheet_client_id" value="<?php echo esc_attr(isset($settings['mf_google_sheet_client_id']) ? $settings['mf_google_sheet_client_id'] : ''); ?>" class="mf-setting-input mf-google-sheet-api-key attr-form-control" placeholder="<?php esc_html_e('Google OAuth Client Id', 'metform'); ?>">
                                                         <p class="description">
-                                                            <?php esc_html_e('Enter here your google client id. ', 'metform'); ?><a class="mf-setting-btn-link" target="__blank" href="<?php echo esc_url('https://console.cloud.google.com', 'metform'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
+                                                            <?php esc_html_e('Enter here your google client id. ', 'metform'); ?><a class="mf-setting-btn-link" target="__blank" href="<?php echo esc_url('https://console.cloud.google.com'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
                                                         </p>
                                                     </div>
                                                     <div class="mf-setting-input-group">
                                                         <label for="attr-input-label" class="mf-setting-label mf-setting-label attr-input-label"><?php esc_html_e('Google Client Secret:', 'metform'); ?></label>
                                                         <input type="text" name="mf_google_sheet_client_secret" value="<?php echo esc_attr(isset($settings['mf_google_sheet_client_secret']) ? $settings['mf_google_sheet_client_secret'] : ''); ?>" class="mf-setting-input mf-google-sheet-api-key attr-form-control" placeholder="<?php esc_html_e('Google OAuth Client Secret', 'metform'); ?>">
                                                         <p class="description">
-                                                            <?php esc_html_e('Enter here your google secret id. ', 'metform'); ?><a class="mf-setting-btn-link" target="__blank" href="<?php echo esc_url('https://console.cloud.google.com', 'metform'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
+                                                            <?php esc_html_e('Enter here your google secret id. ', 'metform'); ?><a class="mf-setting-btn-link" target="__blank" href="<?php echo esc_url('https://console.cloud.google.com'); ?>"><?php esc_html_e('Create from here', 'metform'); ?></a>
                                                         </p>
                                                     </div>
                                                 </div>

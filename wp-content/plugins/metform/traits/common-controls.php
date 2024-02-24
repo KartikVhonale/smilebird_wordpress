@@ -955,7 +955,7 @@ trait Common_Controls{
 				'mf_layout_note',
 				[
 					'type'            => Controls_Manager::RAW_HTML,
-					'raw'             => esc_html__($text, 'metform'),
+					'raw'             => esc_html($text),
 					'content_classes' => 'elementor-panel-alert elementor-panel-alert-info',
 				]
 			);

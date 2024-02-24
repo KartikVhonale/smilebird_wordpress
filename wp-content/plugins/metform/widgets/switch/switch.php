@@ -163,35 +163,24 @@ Class MetForm_Input_Switch extends Widget_Base{
 			]
 		);
 
-		$this->add_control(
-			'mf_switch_option_btn_active_color',
+		$this->add_group_control(
+			Group_Control_Box_Shadow::get_type(),
 			[
-				'label' => esc_html__( 'Input Active Color', 'metform' ),
-				'type' => Controls_Manager::COLOR,
-				'global' => [
-					'default' => \Elementor\Core\Kits\Documents\Tabs\Global_Colors::COLOR_PRIMARY,
-				],
-				'selectors' => [
-					'{{WRAPPER}} .mf-input-control:checked~.mf-input-control-label::before' => 'border-color: {{VALUE}}; background-color: {{VALUE}}',
-				],
-				'default' => '#007BFF',
+				'name' => 'mf_input_box_shadow',
+				'label' => esc_html__( 'Box Shadow', 'metform' ),
+				'selector' => '{{WRAPPER}} .mf-input, {{WRAPPER}} .irs--round .irs-line, {{WRAPPER}} .mf-input-switch label.mf-input-control-label:before, {{WRAPPER}} .mf-input-wrapper .asRange, {{WRAPPER}} .asRange .asRange-pointer:before, {{WRAPPER}} .mf-file-upload-container .mf-input-file-upload-label, {{WRAPPER}} .mf-input-wrapper .iti--separate-dial-code .iti__selected-flag, {{WRAPPER}} .mf-input-calculation-total, {{WRAPPER}} .mf-input-select > .mf_select__control, {{WRAPPER}} .mf-input-multiselect .mf_multiselect__control, {{WRAPPER}} .mf_multiselect__option, {{WRAPPER}} .mf-input-wrapper .input-range__track--background',
 			]
 		);
-
-		
-
-		$this->input_controls(['ONLY_BOX_SHADOW']);
 		
 		$this->add_control(
             'mf_switch_active_inactive_text_heading',
             [
-                'label' => esc_html__( 'Active and Inactive Text:', 'metform' ),
+                'label' => esc_html__( 'Active and Inactive:', 'metform' ),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
 		);
 
-		
 
 		$this->start_controls_tabs('mf_switch_active_inactive_text_tabs');
 			$this->start_controls_tab(
@@ -201,24 +190,89 @@ Class MetForm_Input_Switch extends Widget_Base{
 				]
 			);
 
-			$this->add_responsive_control(
-				'mf_switch_inactive_text_color',
-				[
-					'label' =>esc_html__( 'Text Color', 'metform' ),
-					'type' => Controls_Manager::COLOR,
-					'default' => '#ffffff',
-					'selectors' => [
-						'{{WRAPPER}} .mf-input-switch .mf-input-control-label::before' => 'color: {{VALUE}};',
-					],
-				]
-			);
-
 			$this->add_group_control(
 				Group_Control_Typography::get_type(),
 				[
 					'name' => 'mf_switch_inactive_text_typo',
 					'label' =>esc_html__( 'Typography', 'metform' ),
 					'selector' => '{{WRAPPER}} .mf-input-switch .mf-input-control-label::before',
+				]
+			);
+
+			$this->add_control(
+				'mf_switch_option_btn_disable_color',
+				[
+					'label' => esc_html__( 'Color', 'metform' ),
+					'type' => Controls_Manager::COLOR,
+					'global' => [
+						'default' => \Elementor\Core\Kits\Documents\Tabs\Global_Colors::COLOR_PRIMARY,
+					],
+					'selectors' => [
+						'{{WRAPPER}} .mf-input-switch .mf-input-control-label::before' => 'border-color: {{VALUE}}; background-color: {{VALUE}}',
+					],
+					'default' => '#DADEEA',
+				]
+			);
+
+
+			$this->add_responsive_control(
+				'mf_switch_inactive_text_color',
+				[
+					'label' =>esc_html__( 'Text Color', 'metform' ),
+					'type' => Controls_Manager::COLOR,
+					'default' => '#80828A',
+					'selectors' => [
+						'{{WRAPPER}} .mf-input-switch .mf-input-control-label::before' => 'color: {{VALUE}};',
+					],
+				]
+			);
+
+			$this->add_responsive_control(
+				'mf_switch_btn_inactive_border_style',
+				[
+					'label' => esc_html_x( 'Input Border Type', 'Border Control', 'metform' ),
+					'type' => Controls_Manager::SELECT,
+					'options' => [
+						'none' => esc_html__( 'None', 'metform' ),
+						'solid' => esc_html_x( 'Solid', 'Border Control', 'metform' ),
+						'double' => esc_html_x( 'Double', 'Border Control', 'metform' ),
+						'dotted' => esc_html_x( 'Dotted', 'Border Control', 'metform' ),
+						'dashed' => esc_html_x( 'Dashed', 'Border Control', 'metform' ),
+						'groove' => esc_html_x( 'Groove', 'Border Control', 'metform' ),
+					],
+					'default'	=> 'none',
+					'selectors' => [
+						'{{WRAPPER}} .mf-input-switch .mf-input-control-label::before' => 'border-style: {{VALUE}};',
+					],
+				]
+			);
+			
+			$this->add_responsive_control(
+				'mf_switch_btn_inactive_border_dimensions',
+				[
+					'label' => esc_html_x( 'Input Border Width', 'Border Control', 'metform' ),
+					'type' => Controls_Manager::DIMENSIONS,
+					'condition'	=> [
+						'mf_switch_btn_inactive_border_style!'	=> 'none'
+					],
+					'selectors' => [
+						'{{WRAPPER}} .mf-input-switch .mf-input-control-label::before' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+	
+			$this->add_responsive_control(
+				'mf_switch_btn_inactive_border_color',
+				[
+					'label' => esc_html_x( 'Input Border Color', 'Border Control', 'metform' ),
+					'type' => Controls_Manager::COLOR,
+					'default' => '',
+					'selectors' => [
+						'{{WRAPPER}} .mf-input-switch .mf-input-control-label::before' => 'border-color: {{VALUE}};',
+					],
+					'condition'	=> [
+						'mf_switch_btn_inactive_border_style!'	=> 'none'
+					],
 				]
 			);
 
@@ -234,12 +288,111 @@ Class MetForm_Input_Switch extends Widget_Base{
 				]
 			);
 
+			$this->add_control(
+				'mf_switch_option_btn_input_slider_text_one',
+				[
+					'label' => esc_html__( 'Input Slider:', 'metform' ),
+					'type' => Controls_Manager::HEADING,
+					'separator' => 'before',
+				]
+			);
+
+			$this->add_control(
+				'mf_switch_option_btn_disable_circle_color',
+				[
+					'label' => esc_html__( 'Circle Background Color', 'metform' ),
+					'type' => Controls_Manager::COLOR,
+					'global' => [
+						'default' => \Elementor\Core\Kits\Documents\Tabs\Global_Colors::COLOR_PRIMARY,
+					],
+					'selectors' => [
+						'{{WRAPPER}} .mf-input-control-label::after' => 'border-color: {{VALUE}}; background-color: {{VALUE}}',
+					],
+					'default' => '#FFFFFF',
+				]
+			);
+			$this->add_responsive_control(
+				'mf_switch_btn_circle_border_style',
+				[
+					'label' => esc_html_x( 'Circle Border Type', 'Border Control', 'metform' ),
+					'type' => Controls_Manager::SELECT,
+					'options' => [
+						'none' => esc_html__( 'None', 'metform' ),
+						'solid' => esc_html_x( 'Solid', 'Border Control', 'metform' ),
+						'double' => esc_html_x( 'Double', 'Border Control', 'metform' ),
+						'dotted' => esc_html_x( 'Dotted', 'Border Control', 'metform' ),
+						'dashed' => esc_html_x( 'Dashed', 'Border Control', 'metform' ),
+						'groove' => esc_html_x( 'Groove', 'Border Control', 'metform' ),
+					],
+					'default'	=> 'none',
+					'selectors' => [
+						'{{WRAPPER}} .mf-input-switch .mf-input-control-label::after' => 'border-style: {{VALUE}};',
+					],
+				]
+			);
+			
+			$this->add_responsive_control(
+				'mf_switch_btn_circle_border_dimensions',
+				[
+					'label' => esc_html_x( 'Circle Border Width', 'Border Control', 'metform' ),
+					'type' => Controls_Manager::DIMENSIONS,
+					'condition'	=> [
+						'mf_switch_btn_circle_border_style!'	=> 'none'
+					],
+					'selectors' => [
+						'{{WRAPPER}} .mf-input-switch .mf-input-control-label::after' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+	
+			$this->add_responsive_control(
+				'mf_switch_btn_circle_border_color',
+				[
+					'label' => esc_html_x( 'Circle Border Color', 'Border Control', 'metform' ),
+					'type' => Controls_Manager::COLOR,
+					'default' => '',
+					'selectors' => [
+						'{{WRAPPER}} .mf-input-switch .mf-input-control-label::after' => 'border-color: {{VALUE}};',
+					],
+					'condition'	=> [
+						'mf_switch_btn_circle_border_style!'	=> 'none'
+					],
+				]
+			);
+
+			
+
+			
+
 			$this->end_controls_tab();
 
 			$this->start_controls_tab(
 				'mf_switch_active_text_tab',
 				[
 					'label' => esc_html__('Active', 'metform'),
+				]
+			);
+			$this->add_group_control(
+				Group_Control_Typography::get_type(),
+				[
+					'name' => 'mf_switch_active_text_typo',
+					'label' =>esc_html__( 'Typography', 'metform' ),
+					'selector' => '{{WRAPPER}} .mf-input-control:checked~.mf-input-control-label::before',
+				]
+			);
+
+			$this->add_control(
+				'mf_switch_option_btn_active_color',
+				[
+					'label' => esc_html__( 'Color', 'metform' ),
+					'type' => Controls_Manager::COLOR,
+					'global' => [
+						'default' => \Elementor\Core\Kits\Documents\Tabs\Global_Colors::COLOR_PRIMARY,
+					],
+					'selectors' => [
+						'{{WRAPPER}} .mf-input-control:checked~.mf-input-control-label::before' => 'border-color: {{VALUE}}; background-color: {{VALUE}}',
+					],
+					'default' => '#007BFF',
 				]
 			);
 
@@ -255,12 +408,52 @@ Class MetForm_Input_Switch extends Widget_Base{
 				]
 			);
 
-			$this->add_group_control(
-				Group_Control_Typography::get_type(),
+			$this->add_responsive_control(
+				'mf_switch_btn_active_border_style',
 				[
-					'name' => 'mf_switch_active_text_typo',
-					'label' =>esc_html__( 'Typography', 'metform' ),
-					'selector' => '{{WRAPPER}} .mf-input-control:checked~.mf-input-control-label::before',
+					'label' => esc_html_x( 'Input Border Type', 'Border Control', 'metform' ),
+					'type' => Controls_Manager::SELECT,
+					'options' => [
+						'none' => esc_html__( 'None', 'metform' ),
+						'solid' => esc_html_x( 'Solid', 'Border Control', 'metform' ),
+						'double' => esc_html_x( 'Double', 'Border Control', 'metform' ),
+						'dotted' => esc_html_x( 'Dotted', 'Border Control', 'metform' ),
+						'dashed' => esc_html_x( 'Dashed', 'Border Control', 'metform' ),
+						'groove' => esc_html_x( 'Groove', 'Border Control', 'metform' ),
+					],
+					'default'	=> 'none',
+					'selectors' => [
+						'{{WRAPPER}} .mf-input-control:checked~.mf-input-control-label::before' => 'border-style: {{VALUE}};',
+					],
+				]
+			);
+			
+			$this->add_responsive_control(
+				'mf_switch_btn_active_border_dimensions',
+				[
+					'label' => esc_html_x( 'Input Border Width', 'Border Control', 'metform' ),
+					'type' => Controls_Manager::DIMENSIONS,
+					'condition'	=> [
+						'mf_switch_btn_active_border_style!'	=> 'none'
+					],
+					'selectors' => [
+						'{{WRAPPER}} .mf-input-control:checked~.mf-input-control-label::before' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+	
+			$this->add_responsive_control(
+				'mf_switch_btn_active_border_color',
+				[
+					'label' => esc_html_x( 'Input Border Color', 'Border Control', 'metform' ),
+					'type' => Controls_Manager::COLOR,
+					'default' => '',
+					'selectors' => [
+						'{{WRAPPER}} .mf-input-control:checked~.mf-input-control-label::before' => 'border-color: {{VALUE}};',
+					],
+					'condition'	=> [
+						'mf_switch_btn_active_border_style!'	=> 'none'
+					],
 				]
 			);
 
@@ -275,9 +468,86 @@ Class MetForm_Input_Switch extends Widget_Base{
 					],
 				]
 			);
+			$this->add_control(
+				'mf_switch_option_btn_input_slider_text_two',
+				[
+					'label' => esc_html__( 'Input Slider:', 'metform' ),
+					'type' => Controls_Manager::HEADING,
+					'separator' => 'before',
+				]
+			);
+
+
+			$this->add_control(
+				'mf_switch_option_btn_active_circle_color',
+				[
+					'label' => esc_html__( 'Circle Background Color', 'metform' ),
+					'type' => Controls_Manager::COLOR,
+					'global' => [
+						'default' => \Elementor\Core\Kits\Documents\Tabs\Global_Colors::COLOR_PRIMARY,
+					],
+					'selectors' => [
+						'{{WRAPPER}} .mf-input-switch .mf-input-control:checked ~ .mf-input-control-label::after' => 'border-color: {{VALUE}}; background-color: {{VALUE}}',
+					],
+					'default' => '#FFFFFF',
+				]
+			);
+			$this->add_responsive_control(
+				'mf_switch_btn_active_circle_border_style',
+				[
+					'label' => esc_html_x( 'Circle Border Type', 'Border Control', 'metform' ),
+					'type' => Controls_Manager::SELECT,
+					'options' => [
+						'none' => esc_html__( 'None', 'metform' ),
+						'solid' => esc_html_x( 'Solid', 'Border Control', 'metform' ),
+						'double' => esc_html_x( 'Double', 'Border Control', 'metform' ),
+						'dotted' => esc_html_x( 'Dotted', 'Border Control', 'metform' ),
+						'dashed' => esc_html_x( 'Dashed', 'Border Control', 'metform' ),
+						'groove' => esc_html_x( 'Groove', 'Border Control', 'metform' ),
+					],
+					'default'	=> 'none',
+					'selectors' => [
+						'{{WRAPPER}} .mf-input-switch .mf-input-control:checked ~ .mf-input-control-label::after' => 'border-style: {{VALUE}};',
+					],
+				]
+			);
+			
+			$this->add_responsive_control(
+				'mf_switch_btn_active_circle_border_dimensions',
+				[
+					'label' => esc_html_x( 'Circle Border Width', 'Border Control', 'metform' ),
+					'type' => Controls_Manager::DIMENSIONS,
+					'condition'	=> [
+						'mf_switch_btn_active_circle_border_style!'	=> 'none'
+					],
+					'selectors' => [
+						'{{WRAPPER}} .mf-input-switch .mf-input-control:checked ~ .mf-input-control-label::after' => 'border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+	
+			$this->add_responsive_control(
+				'mf_switch_btn_active_circle_border_color',
+				[
+					'label' => esc_html_x( 'Circle Border Color', 'Border Control', 'metform' ),
+					'type' => Controls_Manager::COLOR,
+					'default' => '',
+					'selectors' => [
+						'{{WRAPPER}} .mf-input-switch .mf-input-control:checked ~ .mf-input-control-label::after' => 'border-color: {{VALUE}};',
+					],
+					'condition'	=> [
+						'mf_switch_btn_active_circle_border_style!'	=> 'none'
+					],
+				]
+			);
+
+
+			
 
 			$this->end_controls_tab();
 		$this->end_controls_tabs();
+
+        
 
 		$this->end_controls_section();
 		

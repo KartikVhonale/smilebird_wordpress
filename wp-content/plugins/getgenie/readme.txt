@@ -1,9 +1,10 @@
+
 ===GetGenie – Ai Content Writer with Keyword Research and Competitor Analysis===
 
 Contributors: XpeedStudio, Ataurr, emranio
 Tags: Ai, ChatGPT, gpt-4, chatbot,  Ai Content writer, SEO content writer, SEO plugin, Ai tools, gpt-3, gpt-4, Copywriting, artificial intelligence, blog generator
 Tested up to: 6.3
-Stable tag: 3.8.3
+Stable tag: 3.8.4
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -20,7 +21,7 @@ This Ai SEO content writer WordPress plugin can perform NLP keywords analysis, H
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/l-wSyVSGk58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-You can even utilize GetGenie as your own SEO content assistant, Ai copilot, and Ai live chatbot like ChatGPT for it’s GPT-3.5, GPT-4, DaVinci, Natural Language Process(NLP), and advanced Ai algorithms.
+You can even utilize GetGenie as your own SEO content assistant, Ai copilot and Ai live chatbot like ChatGPT for it’s GPT-3.5, GPT-4, DaVinci, Natural Language Process(NLP), and advanced Ai algorithms.
 
 Also, this WordPress Ai writer and SEO plugin is compatible with Gutenberg, plagiarism checker (Copyscape), and popular WordPress page builders like Elementor, Oxygen, and Bricks.
 
@@ -32,7 +33,7 @@ Overall, GetGenie is the most effective and convenient automatic AI content gene
 
 ✅ **37+ writing templates** for automatic SEO content and copywriting
 
-✅ **100% unique and plagiarism-free** SEO content generation
+✅ **100% unique and plagiarism free** SEO content generation
 
 ✅ Gutenberg and classic editor supported **Blog Wizard**
 
@@ -173,9 +174,9 @@ Overall, GetGenie is the most effective and convenient automatic AI content gene
 🔥 [Conclusion](https://getgenie.ai/template/conclusion/)
 
 ## 33+ Supported Languages of GetGenie Ai Content Writer and SEO Assistant ##
-Currently, the GetGenie Ai SEO content writing tool supports 33+ languages. With GetGenie Ai, you can expand the global reach and accessibility of your SEO content. 
+Currently, GetGenie Ai SEO content writing tool supports 33+ languages. With GetGenie Ai, you can expand the global reach and accessibility of your SEO content. 
 
-At the same time, the multilingual support of GetGenie Ai helps you enhance SEO content creation across diverse linguistic markets, driving organic traffic and engagement.
+At the same time, multilingual support of GetGenie Ai helps you in enhancing SEO content creation across diverse linguistic markets, driving organic traffic and engagement.
 
 Generate Ai SEO-optimized content in our ever-expanding list of supported languages such as English, Hebrew, Arabic, Japanese, Korean, Hindi, Urdu, Chinese (Traditional), Chinese (Simplified), Indonesian, Vietnamese, Malay, Russian, Turkish, Ukrainian, Thai, Spanish, German, French, Portuguese, Italian, Polish, Dutch, Danish, Romanian, Hungarian, Czech, Swedish, Greek, Slovak, Latvian, Lithuanian, Bulgarian, Norwegian and more.
 
@@ -191,7 +192,7 @@ The **SEO mode** is also embedded with the Blog wizard template of the GetGenie 
 Here are the on-demand SEO features of this best WordPress Ai SEO writing tool that comes with the Blog Wizard template:
  
 **[SEO Keyword analysis:](https://getgenie.ai/docs/seo-assistant/keyword-research-for-blog-posts/)**
-This SEO AI content writer has an NLP (Natural Language Processing), and powerful Ai technology for SEO Keyword research and keyword analysis options.
+This SEO Ai Content writer has an NLP (Natural Language Processing), and powerful Ai technology for SEO Keyword research and keyword analysis options.
 
 To enjoy its keyword analysis and SEO keyword research feature, you need to enter the keyword in the Blog Wizard template. 
 
@@ -229,7 +230,7 @@ GetGenie Ai SEO tool use Natural Language Processing or NLP algorithms to analyz
 
 You can then use these keywords to optimize the content for search engines and to ensure that the text is clear and concise.
 
-### [WordPress Blog Wizard:](https://getgenie.ai/docs/blog-wizard/getgenie-ai-blog-wizard/)
+## [WordPress Blog Wizard:](https://getgenie.ai/docs/blog-wizard/getgenie-ai-blog-wizard/)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5lIwXUS8QHE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -248,11 +249,11 @@ You can get the recommended NLP score, SEO keyword research, one-page SEO detail
 
 Plus, you can check for content plagiarism directly from the blog wizard template of GetGenie Ai content writing assistant.
 
-### [One-Click Blog Generator:](https://getgenie.ai/docs/blog-wizard/one-click-blog-generation/)
+## [One Click Blog Generation:](https://getgenie.ai/docs/blog-wizard/one-click-blog-generation/)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_nbEmYHAbGA?si=wEOXaBwv4UE_gA3r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-One-click blog generator feature is a brand-new, optimized, and time-saving content writing approach integrated with GetGenie’s Blog Wizard template.
+One-click blog generation feature is a brand-new, optimized, and time-saving content writing approach integrated with GetGenie’s Blog Wizard template.
 
 Now you can generate and insert an entire SEO-friendly blog post to your WordPress website editor with just 1 click. You don’t need to generate individual descriptions from each heading separately.
 
@@ -260,7 +261,7 @@ Also, this 1-click blog generator of GetGenie Ai SEO content writer is compatibl
 
 However, the manual generation for each heading(H2, H3, H4….) option is still available with the blog wizard template of GetGenie Ai writer.
 
-### **[GenieChat - Ai Copilot and Live Chatbot](https://getgenie.ai/docs/ai-chatbot/genie-chat-ai-chatbot-from-getgenie/)**
+## **[GenieChat - Ai Copilot and Live Chatbot](https://getgenie.ai/docs/ai-chatbot/genie-chat-ai-chatbot-from-getgenie/)**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WZ5s_Kj78iA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -296,17 +297,17 @@ You can also select the answer size, see the chat history, and remove live chat 
 
 Overall you will get a question-answer session with the GenieChat Ai copilot chatbot and feel like a conversation with a human!
 
-### [Genie Mode:](https://getgenie.ai/docs/templates/genie-mode-2/)
+## [Genie Mode:](https://getgenie.ai/docs/templates/genie-mode-2/)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Xz3AI5dskXo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Genie Mode is the special feature of the GetGenie Ai plugin which makes the content writing process super easy and fast. This Ai template can generate any type of SEO-optimized content within a few seconds. 
+Genie Mode is the special feature of GetGenie Ai plugin which makes the content writing process super easy and fast. This Ai template can generate any type of SEO-optimized content within a few seconds. 
 
 All you need to do is provide context and this template will provide you with the customized and personalized content you want.
 
 So, whether you are writing a blog intro, slogans, or copywriting, you can instruct the GetGenie Ai SEO writer to generate it for you.
 
-### [Ai WooCommerce Wizard:](https://getgenie.ai/docs/how-to-tutorials/woocommerce-wizard/)
+## [Ai WooCommerce Wizard:](https://getgenie.ai/docs/how-to-tutorials/woocommerce-wizard/)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/I_zYdUXlfR0" title="Keyword and SEO Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -314,9 +315,9 @@ If you need fully SEO-optimized and plagiarism-free Ai content for your WooComme
 
 This WooCommerce Ai product description writer of GetGenie Ai writer will generate the appropriate title, long desc(description), and short desc(description) for your WooCommerce product with just a few clicks.
 
-This Ai-powered product description generator tool can offer instant content writing as well as SEO-optimized and 100% unique output for your WooCommerce pages.
+This Ai-powered product description generatort tool can offer instant content writing as well as SEO-optimized and 100% unique output for your WooCommerce pages.
 
-### 🛒 GetGenie Ai WooCommerce Templates:
+## 🛒 GetGenie Ai WooCommerce Templates:
 
 **[WooCommerce Product Short Description:](https://getgenie.ai/docs/templates/woocommerce-product-short-description/)**
 
@@ -489,7 +490,7 @@ The user-friendly interface and straightforward process of the GetGenie Ai produ
 ### 🎯 TIME TO GET STARTED WITH GETGENIE AI
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bVoiXJOKBIQ?si=airwjFr4Gtztophf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-GetGenie Ai SEO Plugin writing tool utilizes the API from [OpenAI](https://beta.openai.com/) along with advanced artificial intelligence algorithms. As a result, GetGenie Ai one-click blog generator not only creates SEO content automatically but also optimizes it to rank well on search engines. 
+GetGenie Ai SEO Plugin writing tool utilizes the API from [OpenAI](https://beta.openai.com/) along with advanced artificial intelligence algorithms. As a result GetGenie Ai not only creates SEO content automatically but also optimizes it to rank well on search engines. 
 
 The best part is you can [claim free credits](https://getgenie.ai/docs/getting-started/license-settings/) for using GetGenie Ai content writer to generate free SEO-optimized content.
 
@@ -503,7 +504,7 @@ The best part is you can [claim free credits](https://getgenie.ai/docs/getting-s
 - 🌐 [Follow us on Twitter](https://twitter.com/getgenieai)
 - 🌐 [Connect on LinkedIn](https://www.linkedin.com/company/getgenieai/posts/)
 - 🌎 [Subscribe Our YouTube Channel](https://www.youtube.com/channel/UCzPzYrqhFgvyvmm0uoLG6Jw)
-- ⭐️ Rate GetGenie on [WordPress](https://wordpress.org/support/plugin/getgenie/reviews/)
+⭐️ Rate GetGenie on [WordPress](https://wordpress.org/support/plugin/getgenie/reviews/)
 
 ### ☂️ OUR OTHER PLUGINS
 
@@ -527,6 +528,11 @@ The best part is you can [claim free credits](https://getgenie.ai/docs/getting-s
 
 
 == Changelog ==
+
+Version 3.8.4 – 10/10/2023
+Added: Plugin translation mechanism.
+Added: New pot file for translation.
+Fixed: NLP keywords generating issue.
 
 Version 3.8.3 – 01/10/2023
 Fixed: SERP data disappearing issue.
@@ -641,8 +647,8 @@ Fixed: conflict issue in WordPress ChatBot plugin, OpenAI ChatGPT functionality 
 
 Version 3.4.3 – 23/03/2023  
 Added: Ai SEO NLP keywords select/deselect feature in statistics screen.  
-Fixed: Ai icon issue in the context menu.  
-Fixed: SEO SERP analysis issue in the questions asked tab.  
+Fixed: Ai icon issue in context menu.  
+Fixed: SEO SERP analysis issue in questions asked tab.  
 Fixed: Multiple Ai paragraph screen generation issue.
 
 Version 3.4.2 – 16/03/2023  
@@ -655,15 +661,15 @@ Fixed: Rank Math SEO title, description count issue in statistics screen.
 Fixed: Ai-generated result count issue in SEO paragraph writing.
 
 Version 3.4.0 – 14/03/2023  
-Added: GenieChat  Ai copilot (ChatGPT OpenAI alternative) with all of its features.  
+Added: GenieChat  Ai copilot (ChatGPT OpenAI alternative) with all of its feature.  
 Improved: Competitor data saving mechanism with Ai technology.  
 Improved: Stability and performance.  
-Fixed: OpenAI API calling error in the console at the GetGenie admin pages.  
-Fixed: Ai paragraph writing screen UI issues.  
-Fixed: GetGenie Ai obe-click blog generator expands outline template result issue for different languages.
+Fixed: OpenAI API calling error in console at GetGenie admin pages.  
+Fixed: Ai paragraph writing screen ui issues.  
+Fixed: Ai expand outline template result issue for different language.
 
 Version 3.3.0 – 06/03/2023  
-Added: Ai-generated SERP data load more features.  
+Added: Ai-generated SERP data load more feature.  
 Added: a simpler way to expand GetGenie Ai outline/paragraph writing templates at the 4th step of the blog wizard.  
 Improved: Ai SEO content history sidebar load more feature.  
 Added: optional keywords and instruction for Ai writing paragraph against an outline.  
@@ -682,25 +688,25 @@ Added: SEO analysis country support for Bulgaria.
 Version 3.2.0 – 08/02/2023  
 Added: GetGenie Ai support in bricks builder.  
 Added: GetGenie Ai support in oxygen builder.  
-Improved: genie mode input which is capable of writing for both selected Ai content and manually typed content.  
+Improved: genie mode input which is capable to write for both of selected Ai content and manually typed content.  
 Fixed: Ai outlinescreen checkbox issue.  
 Fixed: GetGenie Ai blog wizard blank screen issue.  
 Fixed: classic editor initial paragraph insert issue.
 
 Version 3.1.3 – 05/02/2023  
-Added: SEO analysis country support (Germany, Portugal, Spain, Vietnam, Indonesia, Malaysia, South Korea, Japan, China, Turkey, Ukraine, Italy, France, Poland, Netherlands, Lithuania, Hungary, Denmark, Czechia, Thailand, Latvia, Slovakia, Greece, Sweden, Saudi Arabia, Russia).  
+Added: SEO analysis country support (Germany, Portugal, Spain, Vietnam, Indonesia, Malaysia, South Korea, Japan, China, Turkey, Ukraine, Italy, France, Poland, Netherland, Lithuania, Hungary, Denmark, Czechia, Thailand, Latvia, Slovakia, Greece, Sweden, Saudi Arabia, Russia).  
 Fixed: conflict issue with Rank Math SEO plugin.
 
 Version 3.1.2 – 01/02/2023  
-Fixed: GetGenie Ai blog wizard opening issue in Gutenberg.
+Fixed: GetGenie Ai blog wizard opening issue in gutenberg.
 
 Version 3.1.1 – 01/02/2023  
-Added: context input option for continuing Ai writing and expanding outline.  
-Added: conditional wizard opening system in Elementor.  
-Improved: openAI GPT script loading mechanism for faster load.  
-Fixed: Ai conflict issue with Astra theme in Gutenberg.  
+Added: context input option for continue Ai writing and expand outline.  
+Added: conditional wizard opening system in elementor.  
+Improved: gpt script loading mechanism for faster load.  
+Fixed: Ai conflict issue with Astra theme in gutenberg.  
 Fixed: conflict issue with Divi theme.  
-Fixed: Ai SEO content score update issue in the classic editor.
+Fixed: Ai SEO content score update issue in classic editor.
 
 Version 3.1.0 – 30/01/2023  
 Added: smoother navigation system in blog wizard screens.  
@@ -725,74 +731,74 @@ Version 3.0.0 – 19/01/2023
 Added: the most needed advanced visualizer chart for competitor’s statistics.  
 Added: keyword heatmap statistics based on all serp data.  
 Added: SEO content nlp keywords score in blog analysis screen.  
-Added: extract and collect keywords within competitors, 2-gram to 5-gram.  
+Added: extract and collecting keywords within competitors, 2-gram to 5-gram.  
 Added: competitors score in blog analysis screen.  
 Added: Ai content readability score and comment in blog analysis.  
 Added: support for Ai content SEO score analysis screen in Classic editor.  
 Added: SEO keyword clustering for competitor data.  
 Added: Ai content readability score implemented in blog analysis.  
 Added: implemented plugin version checking for all plugin controllers for backward compatibility.  
-Added: Ai content history clean-up button.  
+Added: Ai content history clean up button.  
 Improved: keywords detail section UI.  
 Improved: history screen functionalities. now users can clear all history data.  
-Improved: go to the previous state functionality in the history screen.  
+Improved: go to previous state functionality in history screen.  
 Improved: blog analysis calculation technique.  
 Improved: blog analysis screen UI.  
 Improved: custom keyword management inside blog analysis screen.  
 Improved: multiple re-writer Ai templates. now paragraph and sentence re-writer is converted to content re-writer for better usability.  
 Fixed: Ai content SEO score analysis heading calculation issue.  
-Fixed: Ai content history privacy for the WP global query. now other plugins get any Ai content history data.
+Fixed: Ai content history privacy for wp global query. now other plugins get any Ai content history data.
 
 Version 2.0.1 – 14/12/2022  
-Added: now GetGenie Mode can be found in the template writing list.  
-Added: complete CPT support. now Blog Wizard is available in Classic Editor.  
+Added: now GetGenie Mode can be found in template writing list.  
+Added: complete cpt support. now blog wizard is available in Classic Editor.  
 Improved: context menu positioning at reference element.  
-Improved: now users can append or replace the outlines from the blog wizard upon choice.  
-Improved: better CPT and meta box supports.  
-Fixed: continue Ai writing, and expand outline insertion issue.  
-Fixed: Ai paragraph insertion issue in Elementor.  
+Improved: now users can append or replace the outlines from blog wizard upon choice.  
+Improved: better CPT and metabox supports.  
+Fixed: continue Ai writing, expand outline insertion issue.  
+Fixed: Ai paragraph insertion issue in elementor.  
 Fixed: WooCommerce Product Long Ai Description insert issue.
 
 Version 2.0.0 – 04/12/2022  
-Added: Introducing Genie instruct mode! It opens a whole new possibility. It’s truly a boss-writing experience.  
+Added: Introducing Genie instruct mode! It opens a whole new possibility. It’s truly a boss writing experience.  
 Added: 33+ Language (Multi-language ) supports to Genie mode.  
-Added: Adopted “GPT3 Davinci 003” (OpenAI ChatGPT) for Genie’s main writing engine. “GPT3 Davinci 003 OpenAI ChatGPT” is a drastically powerful update.  
-Added: Context menu in Gutenberg and Elementor. Now users can use re-write, expand-outline continue-writing Ai templates, and genie mode on there.  
-Added: Ai content History screen moved to the sidebar with new UI and functionalities.  
+Added: Adopted “GPT3 Davinci 003” (OpenAI ChatGPT) for genie’s main writing engine. “GPT3 Davinci 003 OpenAI ChatGPT” is a drastically powerful update.  
+Added: Context menu in gutenberg and elementor. Now users can use re-write, expand-outline continue-writing Ai templates and genie mode on there.  
+Added: Ai content History screen moved to sidebar with new UI and functionalities.  
 Added: Privacy centric history logging. Now users can see their writing history only.  
 Added: Now you can see blog wizard and keyword analysis results in history too.  
 Added: Now Ai content history and usage data can be seen anywhere from the admin panel.  
-Added: GetGenie Ai content writer usage details moved to modal with a new design.  
+Added: GetGenie Ai content writer usage details moved to modal with new design.  
 Added: Now multiple subscription limits will shown in Ai limit usage section.  
 Added: First stage of “voice of tone”, more tones will be added soon.  
 Added: RTL support  
-Added: Automatically LTR, RTL shifting in the sidebar based on selected language from 33+ languages.  
-Added: French, Portuguese, Arabic, and Hebrew language support. More are coming soon.  
-Added: Now users can change the number of results for expand-outline, continue-writing, and re-write-content Ai SEO content writer templates.  
+Added: Automatically LTR, RTL shifting in sidebar based on selected language from 33+ languages.  
+Added: French, Portuguese, Arabic and Hebrew language support. More are coming soon.  
+Added: Now users can change the number of results for expand-outline, continue-writing and re-write-content Ai SEO content writer templates .  
 Improvement: JS optimization.  
-Improvement: Increased the max number of results and max number of words in each AI-generated results.  
+Improvement: Increased the max number of results and max number of words in each Ai-generated results.  
 Improvement: Pagination in history screen.  
-Improvement: Compact UI design in the sidebar.  
+Improvement: Compact UI design in sidebar.  
 Improved: Now SERP result will dynamically grab Ai heading texts for better output.  
-Fixed: Wrong heading counts in serp results.  
+Fixed: Wrong heading count in serp results.  
 Fixed: PHP conflict with Yoast SEO plugin.  
-Fixed: Link hover issue in the help page.
+Fixed: Link hover issue in help page.
 
 Version 1.2.2 – 31/10/22  
 Improved: GetGenie Ai blog wizard competitor statistics calculation.  
-Fixed: conflicting issue with the Directorist plugin which prevented to creation of DOM elements.
+Fixed: conflicting issue with Directorist plugin which prevented to create DOM elements.
 
 Version 1.2.1 – 19/10/2022  
 Improved: data duplication in people also searched, keywords & SERP section.  
 Improved: optimized coding mechanism to reduce JS bundle size.  
 Fixed: outline screen input field not closing on blur issue.  
-Fixed: keyboard event conflicting in Ai blog wizard with other OpenAi ChatGPT plugins which prevented users from typing more letters there.
+Fixed: keyboard event conflicting in Ai blog wizard with other OpenAi ChatGPT plugins which prevented users to type more letters there.
 
 Version 1.2.0 – 10/10/2022  
-Added: multi-language support (Spanish, German) and more to go.  
-Added: Ai SEO content writer template and advanced writing in WordPress pages.  
-Added: WordPress full site editor support for Ai content writing template and advanced writing.  
-Improved: repositioned the getting started menu for better accessibility.  
+Added: multi language support (Spanish, German) and more to go.  
+Added: Ai SEO content writer template and advance writing in WordPress pages.  
+Added: WordPress full site editor support for Ai content writing template and advance writing.  
+Improved: repositioned getting started menu for better accessibility.  
 Improved: statistics score calculation.  
 Improved: Ai SEO content feedback mechanism in blog wizard.  
 Fixed: minor CSS issues.  
@@ -802,16 +808,16 @@ Version 1.1.6 – 21/09/2022
 Fixed: router auto redirect issue.
 
 Version 1.1.5 – 20/09/2022  
-Added: custom SEO keyword add/remove the feature as an SEO optimizer  
-Added: SEO focus keyword-based blog content score update.  
+Added: custom SEO keyword add/remove feature as SEO optimizer  
+Added: SEO focus keyword based blog content score update.  
 Improved: Ai WooCommerce product description and content writing template results.  
 Improved: Ai blog content score calculation.  
-Improved: now author-level users can use Genie. Role-based custom permission will be released soon.  
-Improved: Split JS files into small chunks for faster loading.  
+Improved: now author level users can use genie. role based custom permission will be released soon.  
+Improved: split js files into small chunks for faster loading.  
 Improved: new icon pack for design consistency.  
 Fixed: license page css issue.  
-Fixed: GetGenie Ai drawer position issue in Elementor editor.  
-Fixed: could not auto-insert from GetGenie Ai to Elementor editor.
+Fixed: GetGenie Ai drawer position issue in elementor editor.  
+Fixed: could not auto insert from GetGenie Ai to elementor editor.
 
 Version 1.1.4 – 08/09/2022  
 Improved: performance and content optimization.  
@@ -828,27 +834,27 @@ Fixed: people also searched for SEO keywords appearance.
 Version 1.1.2 – 30/08/2022  
 Improved: google trend chart for SEO keywords.  
 Improved: JS performance improvement.  
-Fixed: Elementor insert text not working.  
-Fixed: broken URL in the admin panel.  
+Fixed: elementor insert text not working.  
+Fixed: broken URL in admin panel.  
 Fixed: advanced Ai content writing template filter.
 
 Version 1.1.1 – 25/08/2022  
 Added: people also searched section in SEO keyword tab.  
-Added: Ai wizard page redirection with auto-open sidebar.  
-Added: search option in Ai content writing templates list.  
-Improved: SEO keyword analysis results based on location.  
+Added: Ai wizard page redirection with auto open sidebar.  
+Added: search option in Ai content writing  templates list.  
+Improved: SEO keyword analysis result based on location.  
 Improved: Ai content writer templates searching query.  
-Improved: Ai tool user experience is better than previous.  
-Fixed: Ai icon design issue in Elementor dark mode.  
-Fixed: GetGenie Ai icon is not found when elementor section opens/closes.
+Improved: Ai tool user experience better than previous.  
+Fixed: Ai icon design issue in elementor dark mode.  
+Fixed: GetGenie Ai icon not found when elementor section opens/closes.
 
 Version 1.1.0 – 24/08/2022  
 Added: new Ai SEO product description writing templates – WooCommerce Product Title, WooCommerce Product Short Description, WooCommerce Product Long Description.  
 Added: now taking multiple inputs for a better writing output.  
-Added: getting started with the GetGenie Ai page to better onboarding.  
+Added: getting started with GetGenie Ai page to better on boarding.  
 Added: Ai woo-commerce wizard to delicately write product information.  
-Added: a new “ai writing” menu to the top bar. now user can write anywhere in wp-admin with GetGenie Ai.  
-Added: new Elementor integration. Now user can write and insert automatically from the Elementor editor.  
+Added: a new “ai writing” menu to top bar. now user can write anywhere in wp-admin with GetGenie Ai.  
+Added: new Elementor integration. Now user can write and insert automatically from Elementor editor.  
 Improved: Ai plugin page loading speed.  
 Improved: competitor data visualization gpt model.  
 Improved: changed chart library to minimize js file size.  
@@ -871,7 +877,7 @@ Fixed: php8 support.
 
 Version 1.0.3  
 Fixed: GetGenie Ai license activation error.  
-Fixed: Console error and blank page while navigating to the plugin’s pages.
+Fixed: console error and blank page while navigating to the plugin’s pages.
 
 Version 1.0.0  
 * Initial release
@@ -897,7 +903,7 @@ WordPress 5.5+
 **Step->4:** for write blog, Go to posts-> add new posts. You will see a button at the top "Write for me".
 
 
- == Frequently Asked Questions ==
+== Frequently Asked Questions (FAQs) ==
 
 = Where can I find the GetGenie documentation? =
 
@@ -908,7 +914,7 @@ GetGenie Ai content writer is suitable for any user associated with SEO content 
 
 Our diverse range of users includes content writers, content managers, SEO strategists, editors, business owners as well as agencies and organizations to fulfill their needs of content and SEO optimizers.
 
-= Who owns the GetGenie Ai-generated copy? =
+= Who owns the GetGenie Ai generated copy? =
 
 The user of GetGenie Ai owns the generated copy via GetGenie Ai. The generated copy using GetGenie is open to use for personal and commercial purposes by the associate user.
 

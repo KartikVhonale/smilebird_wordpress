@@ -252,17 +252,17 @@ if (!class_exists('\Wpmet\Libs\Stories')):
 
             $this->title = (isset($this->title) && !empty($this->title) ? $this->title . ' ' : '') . 'Stories';
 
-            wp_add_dashboard_widget( 'wpmet-stories', __( 'Wpmet Stories', 'metform' ), [ $this, 'show' ] );
+            wp_add_dashboard_widget( 'wpmet-stories', __( 'Wpmet Stories', 'metform' ), [ $this, 'show' ], null, null, 'normal', 'high' );
 
             // Move our widget to top.
             global $wp_meta_boxes;
 
-            $dashboard = $wp_meta_boxes['dashboard']['normal']['core'];
+            $dashboard = $wp_meta_boxes['dashboard']['normal']['high'];
             $ours = [
                 'wpmet-stories' => $dashboard['wpmet-stories'],
             ];
 
-            $wp_meta_boxes['dashboard']['normal']['core'] = array_merge( $ours, $dashboard );
+            $wp_meta_boxes['dashboard']['normal']['high'] = array_merge( $ours, $dashboard );
         }
 
         public function show() {

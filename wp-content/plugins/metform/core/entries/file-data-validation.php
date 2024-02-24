@@ -36,13 +36,23 @@ class File_Data_Validation
      */
     private static function file_size_validation($input_name, $file_data)
     {
+        if(!isset(self::$fields_setting[$input_name])){
+            self::$response[$input_name] = [esc_html__("No File found", 'metform')];
+            return; 
+        }
         $field_setting = self::$fields_setting[$input_name];
         $limit_status  = isset($field_setting->mf_input_file_size_status) && $field_setting->mf_input_file_size_status == 'on' ? true : false;
         if ($limit_status) {
             $file_size_limit = isset($field_setting->mf_input_file_size_limit) ? $field_setting->mf_input_file_size_limit : 128;
             $file_size       = is_array($file_data['size']) ? array_sum($file_data['size']) / 1024 : $file_data['size'] / 1024;
             if ($file_size > $file_size_limit) {
-                self::$response[$input_name] = [esc_html__(sprintf("%s size cannot exceed %u kb.", $input_name, $file_size_limit), 'metform')];
+                // translators: Error message for file size limit. %s is the input name, %u is the file size limit in kilobytes.
+                $error_message = sprintf(esc_html__('%$1s size cannot exceed %2$u kb.','metform'),
+                    $input_name,         // Value for %s placeholder (input_name)
+                    $file_size_limit     // Value for %u placeholder (file_size_limit)
+                );
+
+                self::$response[$input_name] = [$error_message];
             }
         }
     }
@@ -53,6 +63,10 @@ class File_Data_Validation
      */
     private static function file_extension_validation($input_name, $file_data)
     {
+        if(!isset(self::$fields_setting[$input_name])){
+            self::$response[$input_name] = [esc_html__("No File found", 'metform')];
+            return; 
+        }
         $field_setting      = self::$fields_setting[$input_name];
         $allowed_file_types = isset($field_setting->mf_input_file_types) ? $field_setting->mf_input_file_types : ['.jpg', '.jpeg', '.gif', '.png'];
         
@@ -74,7 +88,9 @@ class File_Data_Validation
                         continue;
                     }
                 }
-                self::$response[$input_name] = [esc_html__(sprintf("%s only allow %s file types.", $input_name, implode(', ', $allowed_file_types)), 'metform')];
+                self::$response[$input_name] = 
+                // translators: Error message for allowed file types. %1$s is the input name, %2$s is a list of allowed file types.
+                [sprintf(esc_html__('%1$s only allow %2$s file types.','metform'), $input_name, implode(', ', $allowed_file_types) )];
                 return;
             }
         }

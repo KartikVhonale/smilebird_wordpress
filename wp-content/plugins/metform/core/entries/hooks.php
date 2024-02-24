@@ -83,7 +83,7 @@ class Hooks
             case 'export_actions':
                 // Show PDF export button when pro plugin is activated
                 if(in_array('metform-pro/metform-pro.php', apply_filters('active_plugins', get_option('active_plugins')))):
-                    echo "<button class='metform-pdf-export-btn attr-btn attr-btn-primary' data-id=". esc_attr($post_id) ." data-rest-api=".esc_url($entry_api).'='.esc_attr($post_id).">".esc_html__('PDF Export', 'metform')." <i class='pdf-spinner'></i></button"; 
+                    echo "<button class='metform-pdf-export-btn attr-btn attr-btn-primary' data-id=". esc_attr($post_id) ." data-nonce ='". esc_attr(wp_create_nonce('metform-pdf-export'))."' data-rest-api=".esc_url($entry_api).'='.esc_attr($post_id).">".esc_html__('PDF Export', 'metform')." <i class='pdf-spinner'></i></button"; 
                 endif;
         }
     }

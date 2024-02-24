@@ -17,6 +17,13 @@
 	<exclude-pattern>vendor/*</exclude-pattern>
 	<exclude-pattern>build-package/*</exclude-pattern>
 	
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array" value="metform"/>
+		</properties>
+	</rule>
+
 	<!-- <rule ref="WordPress"> -->
 		<!-- <exclude name="WordPress.Files.FileName"/> -->
 		<!-- <exclude name="WordPress.NamingConventions.ValidVariableName"/> -->

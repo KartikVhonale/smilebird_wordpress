@@ -122,7 +122,9 @@ class Form_Data
                                 }else{
                                     echo "<td>" . esc_html( $option_text ) . "</td>";
                                 }
-                            } else {
+                            } else if(isset($value['widgetType']) && $value['widgetType'] == 'mf-text-editor') {
+                                echo "<td>" . wp_kses_post($form_data[$key]) . "</td>";
+                            }else{
                                 $output = isset($form_data[$key]) ? (is_array($form_data[$key]) ? implode(', ', $form_data[$key]) : $form_data[$key]) : '';
                                 echo "<td>" . esc_html($output) . "</td>";
                             }
@@ -210,9 +212,9 @@ class Form_Data
                                             $optionOutput[] = "$optionName - $optionValue";
                                         }
                                     }
-                                    echo "<span>" . implode(", ", $optionOutput) . "</span>";
+                                    echo wp_kses_post("<span>" . implode(", ", $optionOutput) . "</span>");
                                 } else {
-                                    echo "<span>" . esc_html($v) . "</span>";
+                                    echo wp_kses_post("<span>" . esc_html($v) . "</span>");
                                 }
                         
                                 echo "<br>";
@@ -417,7 +419,7 @@ class Form_Data
                 $conditional_value_data = !empty($form_data[$conditional_field_name]) ? $form_data[$conditional_field_name] : '';
                 $condition_value_array = explode(",",$conditional_value_data);
 
-                $condition_value_index = (array_search($conditional_field_value,$condition_value_array)!==false)? array_search($conditional_field_value,$condition_value_array) : '';
+                $condition_value_index = array_search($conditional_field_value, $condition_value_array);
 
                 $conditional_value = isset($condition_value_array[$condition_value_index])? $condition_value_array[$condition_value_index] : "";
 

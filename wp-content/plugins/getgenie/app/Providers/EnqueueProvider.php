@@ -25,6 +25,9 @@ class EnqueueProvider
 			add_action('admin_print_scripts-post-new.php', [$this, 'cpt_admin_script']);
 			add_action('admin_print_scripts-post.php', [$this, 'cpt_admin_script']);
 			add_action('current_screen', [$this, 'check_current_screen']);
+
+			
+
 		});
 	}
 
@@ -112,7 +115,16 @@ class EnqueueProvider
 				wp_enqueue_script('getgenie-blog-wizard-scripts', GETGENIE_URL . 'assets/dist/admin/js/blog-wizard.js', ['wp-plugins', 'wp-i18n', 'wp-element', 'wp-dom', 'wp-data'], GETGENIE_VERSION, true);
 			}
 			wp_enqueue_script('getgenie-admin-scripts', GETGENIE_URL . 'assets/dist/admin/js/wp-integrations.js', ['wp-plugins', 'wp-edit-post', 'wp-i18n', 'wp-element', 'wp-dom', 'wp-data'], GETGENIE_VERSION, true);
+
 			wp_enqueue_style('getgenie-fonts-style', GETGENIE_URL . 'assets/dist/admin/styles/wp-font-family.css', [], GETGENIE_VERSION);
+
+			wp_set_script_translations('getgenie-admin-pages-scripts', 'getgenie', GETGENIE_DIR . 'languages');
+			wp_set_script_translations('getgenie-admin-scripts', 'getgenie', GETGENIE_DIR . 'languages');
+			wp_set_script_translations('getgenie-blog-wizard-scripts', 'getgenie', GETGENIE_DIR . 'languages');
+
+			wp_set_script_translations('getgenie-common-scripts', 'getgenie', GETGENIE_DIR . 'languages');
+			wp_set_script_translations('getgenie-handler-scripts', 'getgenie', GETGENIE_DIR . 'languages');
+			wp_set_script_translations('getgenie-templates-scripts', 'getgenie', GETGENIE_DIR . 'languages');
 		}
 	}
 

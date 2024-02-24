@@ -46,13 +46,13 @@
                             </div>
 
                             <?php if (class_exists('\MetForm_Pro\Core\Features\Quiz\Integration')) : ?>
-                            <div class="mf-input-group">
-                                <label class="attr-input-label">
-                                    <input type="checkbox" value="1" name="quiz_summery" class="mf-admin-control-input mf-form-modalinput-quiz_result_show">
-                                    <span><?php esc_html_e('Show Quiz Summary:', 'metform'); ?></span>
-                                </label>
-                                <span class='mf-input-help'><?php esc_html_e('Quiz summary will be shown to user after form submission with success message.', 'metform'); ?></span>
-                            </div>
+                                <div class="mf-input-group">
+                                    <label class="attr-input-label">
+                                        <input type="checkbox" value="1" name="quiz_summery" class="mf-admin-control-input mf-form-modalinput-quiz_result_show">
+                                        <span><?php esc_html_e('Show Quiz Summary:', 'metform'); ?></span>
+                                    </label>
+                                    <span class='mf-input-help'><?php esc_html_e('Quiz summary will be shown to user after form submission with success message.', 'metform'); ?></span>
+                                </div>
                             <?php endif; ?>
 
                             <div class="mf-input-group">
@@ -127,6 +127,9 @@
                                 <input type="text" name="redirect_to" class="mf-form-modalinput-redirect_to attr-form-control" placeholder="<?php esc_html_e('Redirection link', 'metform'); ?>">
                                 <span class='mf-input-help'><?php esc_html_e('Users will be redirected to the this link after submission.', 'metform'); ?></span>
                             </div>
+
+                            <?php do_action('mf_add_url_databypass_input');  ?>
+                            
 
 
                         </div>
@@ -227,18 +230,18 @@
 
                         <div class="attr-modal-body" id="metform_form_modal_body">
 
-                        <div class="mf-input-group">
-
-                            <label class="attr-input-label">
-                                <input type="checkbox" value="1" name="mf_hubspot_forms" class="mf-admin-control-input mf-hubspot-forms">
-                                <span><?php esc_html_e('HubSpot Forms:', 'metform'); ?></span>
-                            </label>
-                            <span class='mf-input-help'><?php esc_html_e('Integrate hubspot with this form. ', 'metform'); ?><a target="_blank" href="<?php echo esc_url(get_dashboard_url()) . 'admin.php?page=metform-menu-settings#mf_crm'; ?>"><?php esc_html_e('Configure HubSpot.', 'metform'); ?></a></span>
-
-
-                            <div class="hubspot_forms_section">
+                            <div class="mf-input-group">
 
                                 <label class="attr-input-label">
+                                    <input type="checkbox" value="1" name="mf_hubspot_forms" class="mf-admin-control-input mf-hubspot-forms">
+                                    <span><?php esc_html_e('HubSpot Forms:', 'metform'); ?></span>
+                                </label>
+                                <span class='mf-input-help'><?php esc_html_e('Integrate hubspot with this form. ', 'metform'); ?><a target="_blank" href="<?php echo esc_url(get_dashboard_url()) . 'admin.php?page=metform-menu-settings#mf_crm'; ?>"><?php esc_html_e('Configure HubSpot.', 'metform'); ?></a></span>
+
+
+                                <div class="hubspot_forms_section">
+
+                                    <label class="attr-input-label">
 
                                         <span><?php esc_html_e('Fetch HubSpot Forms', 'metform'); ?><span class="dashicons dashicons-update metfrom-btn-refresh-hubsopt-list"></span></span>
                                     </label>
@@ -258,10 +261,10 @@
                             </div>
 
                             <div class="mf-input-group">
-                            <label class="attr-input-label">
-                                <input type="checkbox" value="1" name="mf_hubspot" class="mf-admin-control-input mf-hubsopt">
-                                <span><?php esc_html_e('HubSpot Contact:', 'metform'); ?></span>
-                            </label>
+                                <label class="attr-input-label">
+                                    <input type="checkbox" value="1" name="mf_hubspot" class="mf-admin-control-input mf-hubsopt">
+                                    <span><?php esc_html_e('HubSpot Contact:', 'metform'); ?></span>
+                                </label>
                             </div>
 
                             <?php if (class_exists('MetForm_Pro\Core\Integrations\Rest_Api')) : ?>
@@ -560,7 +563,7 @@
                                             $forms = mailster('forms')->get();
                                             foreach ($forms as $form) :
                                             ?>
-                                                <option value="<?php esc_html_e($form->ID, 'metform'); ?>"><?php esc_html_e($form->name, 'metform'); ?></option>
+                                                <option value="<?php echo esc_attr($form->ID); ?>"><?php echo esc_html($form->name); ?></option>
                                             <?php
                                             endforeach;
 
@@ -692,11 +695,11 @@
                     <?php endif; ?>
 
 
-                        <div role="tabpanel" class="attr-tab-pane" id="mf-crm">
+                    <div role="tabpanel" class="attr-tab-pane" id="mf-crm">
 
-                            <div class="attr-modal-body" id="metform_form_modal_body">
+                        <div class="attr-modal-body" id="metform_form_modal_body">
 
-                                <?php if (class_exists('\MetForm_Pro\Core\Integrations\Crm\Zoho\Integration')) : ?>
+                            <?php if (class_exists('\MetForm_Pro\Core\Integrations\Crm\Zoho\Integration')) : ?>
                                 <!-- Zoho integration  -->
                                 <div class="mf-input-group">
                                     <label class="attr-input-label">
@@ -704,54 +707,83 @@
                                         <span><?php esc_html_e('Zoho Contact:', 'metform'); ?></span>
                                     </label>
                                     <span class='mf-input-help'><?php esc_html_e('Integrate Zoho contacts with this form. ', 'metform'); ?><a target="_blank" href="<?php echo esc_url(get_dashboard_url()) . 'admin.php?page=metform-menu-settings#mf_crm'; ?>"><?php esc_html_e('Configure Zoho.', 'metform'); ?></a></span>
-                                </div>
-                                <?php endif; ?>
 
-                                <!-- Helpscout integration -->
+                                    <div style="display: none;" class="mf_zoho_forms_section">
+                
+                                        <div class="mf-input-group"><label class="attr-input-label"><?php esc_html_e('Form Fields', 'metform') ?></label>
+                                        <p style="display:none" class="mf-zoho-error-msg"></p>
+                                            <div class="mf-inputs mf-cf-fields">
+                                                <div id="mf-zoho-all-form-fields">
+                                                    
+                                                    <div id="mf-zoho-single-field" class="mf-cf-single-field mf-zoho-crm-single-field">
+                                                        <div class="mf-cf-single-field-input">
+                                                            <label><?php esc_html_e('Select Metform Field', 'metform') ?></label>
+                                                            <select name="mf-zoho-custom-fields[]" class="mf-zoho-custom-fields attr-form-control ">
 
-                                <?php if (class_exists('\MetForm_Pro\Core\Integrations\Crm\Helpscout\Helpscout')) : ?>
+                                                            </select>
+                                                        </div>
+                                                        <div class="mf-cf-single-field-input">
+                                                        <label><?php esc_html_e('Select Zoho Form Field', 'metform') ?></label>
+                                                            <select  name="mf-zoho-form-fields[]" class="attr-form-control mf-zoho-form-fields mf-zoho-form-fields-url-copier" >
 
-                                    <div class="mf-input-group">
-                                        <label class="attr-input-label">
-                                            <input type="checkbox" value="1" name="mf_helpscout" class="mf-admin-control-input mf-helpscout">
-                                            <span><?php esc_html_e('Helpscout', 'metform'); ?></span>
-                                        </label>
-                                        <span class='mf-input-help'><?php esc_html_e('Integrate Helpscout with this form. ', 'metform'); ?><a target="_blank" href="<?php echo esc_url(get_dashboard_url()) . 'admin.php?page=metform-menu-settings#mf_crm'; ?>"><?php esc_html_e('Configure Helpscout.', 'metform'); ?></a></span>
-
-                                        <div style="display: none;" class="helpscout_forms_section">
-
-                                            <label class="attr-input-label">
-                                                <span><?php esc_html_e('Available Mailboxes', 'metform'); ?></span>
-                                            </label>
-
-                                            <?php if (get_option('mf_helpscout_mailboxes') && is_array(get_option('mf_helpscout_mailboxes'))) : ?>
-                                                <select id="mf_helpscout_mailbox" name='mf_helpscout_mailbox' class="attr-form-control helpscout_mailboxes">
-                                                    <?php foreach (get_option('mf_helpscout_mailboxes') as $mailbox) : ?>
-                                                        <option value="<?php echo esc_html($mailbox['id'], 'metform') ?>"><?php echo esc_html($mailbox['name'], 'metform') ?></option>
-                                                    <?php endforeach; ?>
-
-                                                </select>
-                                            <?php else : ?>
-                                                <span>No mailbox found</span>
-                                            <?php endif; ?>
-
-
-                                            <br><br>
-
-                                            <div id="mf-helpscout-fileds"></div>
-
+                                                            </select>
+                                                        </div>
+                                                        <a href="#" class="mf-btn-del-single-field mf-btn-del-single-field-zoho"><?php esc_html_e('Delete', 'metform') ?></a>
+                                                    </div>
+                                                </div>
+                                                <button class="mf-add-zoho_fields mf-add-cf" type="button"><span>+</span></button>
+                                            </div>
                                         </div>
+                                    </div>
 
+                                </div>
+                            <?php endif; ?>
+
+                            <!-- Helpscout integration -->
+
+                            <?php if (class_exists('\MetForm_Pro\Core\Integrations\Crm\Helpscout\Helpscout')) : ?>
+
+                                <div class="mf-input-group">
+                                    <label class="attr-input-label">
+                                        <input type="checkbox" value="1" name="mf_helpscout" class="mf-admin-control-input mf-helpscout">
+                                        <span><?php esc_html_e('Helpscout', 'metform'); ?></span>
+                                    </label>
+                                    <span class='mf-input-help'><?php esc_html_e('Integrate Helpscout with this form. ', 'metform'); ?><a target="_blank" href="<?php echo esc_url(get_dashboard_url()) . 'admin.php?page=metform-menu-settings#mf_crm'; ?>"><?php esc_html_e('Configure Helpscout.', 'metform'); ?></a></span>
+
+                                    <div style="display: none;" class="helpscout_forms_section">
+
+                                        <label class="attr-input-label">
+                                            <span><?php esc_html_e('Available Mailboxes', 'metform'); ?></span>
+                                        </label>
+
+                                        <?php if (get_option('mf_helpscout_mailboxes') && is_array(get_option('mf_helpscout_mailboxes'))) : ?>
+                                            <select id="mf_helpscout_mailbox" name='mf_helpscout_mailbox' class="attr-form-control helpscout_mailboxes">
+                                                <?php foreach (get_option('mf_helpscout_mailboxes') as $mailbox) : ?>
+                                                    <option value="<?php echo esc_html($mailbox['id'], 'metform') ?>"><?php echo esc_html($mailbox['name'], 'metform') ?></option>
+                                                <?php endforeach; ?>
+
+                                            </select>
+                                        <?php else : ?>
+                                            <span>No mailbox found</span>
+                                        <?php endif; ?>
+
+
+                                        <br><br>
+
+                                        <div id="mf-helpscout-fileds"></div>
 
                                     </div>
 
-                                <?php endif; ?>
 
-                                <?php do_action('metform_fluent_crm_editor_markup') ?>
+                                </div>
 
-                            </div>
+                            <?php endif; ?>
+
+                            <?php do_action('metform_fluent_crm_editor_markup') ?>
 
                         </div>
+
+                    </div>
 
                     <?php do_action('mf_form_settings_tab_content'); ?>
 

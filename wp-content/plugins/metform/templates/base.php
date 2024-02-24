@@ -305,6 +305,45 @@ Class Base{
                 'demo-url'  => 'https://products.wpmet.com/metform/pro-demos/calculation-form-2/',
                 'file' => '',
             ],
+            'template-39' => [
+                'id' => 39,
+                'package' => 'free',
+                'form_type' => 'quiz-form',
+                'title' => 'Essential Oil and Wellness Quiz',
+                'preview-thumb' => \MetForm\Plugin::instance()->plugin_url() . 'templates/1/preview-thumb.svg',
+                'demo-url'  => 'https://products.wpmet.com/metform/contact-form-1/',
+                'file' => \MetForm\Plugin::instance()->plugin_dir() . 'templates/39/content.json',
+            ],
+            'template-40' => [
+                'id' => 40,
+                'package' => 'free',
+                'form_type' => 'quiz-form',
+                'title' => 'General Knowledge Quiz',
+                'preview-thumb' => \MetForm\Plugin::instance()->plugin_url() . 'templates/1/preview-thumb.svg',
+                'demo-url'  => 'https://products.wpmet.com/metform/contact-form-1/',
+                'file' => \MetForm\Plugin::instance()->plugin_dir() . 'templates/40/content.json',
+            ],
+            'template-41' => [
+                'id' => 41,
+                'package' => 'free',
+                'form_type' => 'quiz-form',
+                'title' => 'Conditional Logic Quiz',
+                'preview-thumb' => \MetForm\Plugin::instance()->plugin_url() . 'templates/1/preview-thumb.svg',
+                'demo-url'  => 'https://products.wpmet.com/metform/contact-form-1/',
+                'file' => \MetForm\Plugin::instance()->plugin_dir() . 'templates/41/content.json',
+            ],
+            'template-42' => [
+                'id' => 42,
+                'package' => 'free',
+                'form_type' => 'quiz-form',
+                'title' => 'Biology Quiz',
+                'preview-thumb' => \MetForm\Plugin::instance()->plugin_url() . 'templates/1/preview-thumb.svg',
+                'demo-url'  => 'https://products.wpmet.com/metform/contact-form-1/',
+                'file' => \MetForm\Plugin::instance()->plugin_dir() . 'templates/42/content.json',
+            ],
+           
+            
+            
         ];
 
         return apply_filters( 'metform/editor/templates', $template_list );

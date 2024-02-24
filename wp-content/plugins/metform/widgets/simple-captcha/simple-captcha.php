@@ -310,6 +310,39 @@ Class MetForm_Input_Simple_Captcha extends Widget_Base{
 		);
 		
 		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'captcha_input_section',
+			[
+				'label' => esc_html__( 'Input', 'metform' ),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_responsive_control(
+			'mf_input_refresh_input_padding',
+			[
+				'label' => esc_html__( 'Padding', 'metform' ),
+				'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', '%', 'em' ],
+				'selectors' => [
+					'{{WRAPPER}} :is(.mf-captcha-input)' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'mf_input_refresh_input_margin',
+			[
+				'label' => esc_html__( 'Margin', 'metform' ),
+				'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', '%', 'em' ],
+				'selectors' => [
+					'{{WRAPPER}} :is(.mf-captcha-input)' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+		$this->end_controls_section();
 		
         $this->start_controls_section(
 			'help_text_section',

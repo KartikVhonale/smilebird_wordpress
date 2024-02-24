@@ -178,7 +178,6 @@ Class Action {
 		// }
 
 		$post = get_post($post_id);
-
 		if(!is_object($post)) {
 			return null;
 		}
@@ -188,6 +187,7 @@ Class Action {
 		}
 
 		$settings = get_post_meta($post->ID, $this->key_form_settings, true);
+
 		$settings = (is_array($settings) ? $settings : []);
 		$settings['entry_title'] = (!isset($settings['entry_title']) ? 'Entry # [mf_id]' : $settings['entry_title']);
 
@@ -257,6 +257,18 @@ Class Action {
 				}
 			}
 		}
+
+		$mf_redirect_params_status = get_post_meta($post_id, 'mf_redirect_params_status', true);
+		
+		$mf_url_params_data = get_post_meta($post_id, 'mf_redirect_params', true);
+
+		if($mf_url_params_data && $mf_redirect_params_status){
+			$mf_url_params_data = json_decode($mf_url_params_data);
+			array_push($all_settings, ['mf_redirect_params'=>$mf_url_params_data]);
+			$all_settings['mf_redirect_params'] = $mf_url_params_data;
+		}
+
+		$all_settings['mf_redirect_params_status'] = $mf_redirect_params_status;
 
 		return $all_settings;
 	}

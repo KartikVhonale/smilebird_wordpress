@@ -123,7 +123,8 @@ Class MetForm_Input_Range extends Widget_Base{
 			'mf_input_range_default_value',
 			[
 				'label' => esc_html__( 'Value', 'metform' ),
-				'type' => Controls_Manager::TEXT,
+				'type' => Controls_Manager::NUMBER,
+				'default' => 0,
 			]
 		);
 

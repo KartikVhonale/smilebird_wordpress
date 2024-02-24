@@ -1,4 +1,4 @@
-/*! elementor - v3.16.0 - 14-09-2023 */
+/*! elementor - v3.16.0 - 09-10-2023 */
 @charset "UTF-8";
 .dialog-widget-content {
   background-color: var(--e-a-bg-default);
@@ -3518,7 +3518,8 @@ ul.elementor-icon-list-items.elementor-inline-items .elementor-inline-item {
   background-image: initial;
 }
 
-.elementor .elementor-element.elementor-widget-n-tabs > .elementor-widget-container > .e-n-tabs > .e-n-tabs-heading .e-n-tab-title[aria-selected=true] {
+.elementor .elementor-element.elementor-widget-n-tabs > .elementor-widget-container > .e-n-tabs > .e-n-tabs-heading .e-n-tab-title[aria-selected=true],
+.elementor .elementor-element.elementor-widget-n-tabs > .elementor-widget-container > .e-n-tabs[data-touch-mode=true] > .e-n-tabs-heading .e-n-tab-title[aria-selected=false]:hover {
   background-color: var(--n-tabs-title-background-color-active);
   background-image: initial;
 }
